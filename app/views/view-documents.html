@@ -7,10 +7,42 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "LAPs home",
+            href: "/home-page"
+          },
+          {
+            text: "Payment documents"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
 
 {% block content %}
 <span class="govuk-caption-xl">Glamshire County Council</span>
-<h1 class="govuk-heading-xl">View documents</h1>
+<h1 class="govuk-heading-xl">Payment documents</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">

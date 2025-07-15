@@ -4,24 +4,54 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Local Authority Payments (LAPs) home"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
 {% block content %}
-<span class="govuk-caption-xl">Glamshire County Council</span>
-<h1 class="govuk-heading-xl">Home</h1>
+
+<span class="govuk-caption-xl">Local Authority Payments (LAPs) home</span>
+<h1 class="govuk-heading-xl">Glamshire County Council</h1>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <div class="">
-      <h2 class="govuk-heading-m"><a class="govuk-link" href="/view-documents">View documents</a></h2>
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/view-documents">Payment documents</a></h2>
       <p class="govuk-body">You can view and download your:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>estimated grant payment amounts for extended producer responsibility (EPR) packaging</li>
-        <li>advice to see payment details</li>
+        <li>remittance advice with payment details</li>
       </ul>
     </div>
   </div>
 
-  <div class="govuk-grid-column-one-half">
-    <div class="">
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
       <h2 class="govuk-heading-m"><a class="govuk-link" href="/bank-details">Bank details</a></h2>
       <p class="govuk-body">You can:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -33,14 +63,13 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <div class="">
-      <h2 class="govuk-heading-m"><a class="govuk-link" href="/view-documents">Get help</a></h2>
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/get-help">Get help</a></h2>
       <p class="govuk-body">You can find links to:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>read guidance</li>
-        <li>view our contact details</li>
-        <li>make a formal complaint or raise a ticket</li>
+        <li>read Local Authority Payments (LAPs) guidance</li>
+        <li>raise a support request</li>
       </ul>
     </div>
   </div>
