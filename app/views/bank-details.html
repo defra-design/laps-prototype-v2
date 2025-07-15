@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Bank details</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          Your local authority bank details
+        </div>
+        <div class="govuk-task-list__status" id="company-details-1-status">
+          <strong class="govuk-tag govuk-tag--red">
+            UNCONFIRMED
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "12 34 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "78910112"
+          }
+        }
+      ]
+    }) }}
+
+  </div>
+</div>
+{% endblock %}

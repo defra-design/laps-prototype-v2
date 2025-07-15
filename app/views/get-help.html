@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Home</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h2 class="govuk-heading-m">Tax Returns</h2>
+      <p class="govuk-body">Submit your self-assessment tax return online.</p>
+      <a class="govuk-link" href="#">Start now</a>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h2 class="govuk-heading-m">Check NI Record</h2>
+      <p class="govuk-body">View your National Insurance contributions.</p>
+      <a class="govuk-link" href="#">Check record</a>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
