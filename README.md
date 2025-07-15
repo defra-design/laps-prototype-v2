@@ -4,9 +4,13 @@ Local Authority Payments (LAPs) is the digital journey within pEPR that enables 
 
 ---
 
-## 🚀 Getting Started
+## Support information:
+LAPS (Local Authorities Payments service) - Collections & Packaging Reforms - 
+https://eaflood.atlassian.net/wiki/spaces/MWR/pages/5617942554/LAPS+Local+Authorities+Payments+service
 
+## 🚀 Getting Started
 This project uses the GOV.UK Prototype Kit. It is suitable for both technical and non-technical users.
+https://prototype-kit.service.gov.uk/docs/install/getting-started-advanced
 
 ### 📦 Installation Instructions
 
