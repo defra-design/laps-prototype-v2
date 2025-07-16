@@ -9,6 +9,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
 
+{% block header %}
+  {{ govukHeader({}) }}
+{% endblock %}
+
+
 {% block stylesheets %}
   {{ super() }}
   <style>
@@ -52,6 +57,23 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
       padding: 1em;
       border: #1d70b8 1px solid;
     }
+    
+    .govuk-service-navigation {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    .govuk-service-navigation__wrapper {
+      display: flex;
+      justify-content: flex-end; /* Aligns items to the right */
+    }
+
+    .govuk-service-navigation__list {
+      display: flex;
+      gap: 1rem; /* Optional: space between items */
+      list-style: none;
+      margin: 0;
+      padding
+    }
   </style>
 {% endblock %}
 
@@ -60,6 +82,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {{ govukServiceNavigation({
   serviceName: "EPR Account for Local Authority Payments",
   serviceUrl: "#",
+  navigationClasses: "nav-links-align-right",
   navigation: [
     {
       href: "#",

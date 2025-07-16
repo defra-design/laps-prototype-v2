@@ -51,9 +51,8 @@
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-          Payments are made every quarter. The amount shown in the documents are estimates and not guaranteed.
+          For the 2025 to 2026 financial year, there will be a single payment covering quarters 1, and 2.
         </strong>
-        <p class="govuk-body govuk-warning-text__text govuk-!-font-weight-regular">For the 2024 to 2025 financial year, there will be a single payment covering quarters 1, 2, and 3.</p>
       </div>
 
     </div>
@@ -68,12 +67,12 @@
     items: [
       {
         value: "published",
-        text: "2024 to 2025",
+        text: "2025 to 2026",
         selected: true
       },
       {
         value: "updated",
-        text: "2023 to 2024"
+        text: "2024 to 2025"
       }
     ]
   }) }}
@@ -84,75 +83,81 @@
     firstCellIsHeader: true,
     head: [
       {
-        text: "Quarter"
+        text: "Date"
       },
       {
         text: "Document name"
       },
       {
-        text: "View document",
-        classes: "govuk-visually-hidden"
+        html: "<span class='govuk-visually-hidden'>Download document</span>"
       },
       {
-        text: "Download document",
-        classes: "govuk-visually-hidden"
+        html: "<span class='govuk-visually-hidden'>View document</span>"
       }
     ],
     rows: [
       [
         {
-          text: "4"
+          text: "9 Dec 2025"
         },
         {
-          text: "Grant determination letter EPR 2024 Q4"
+          text: "Grant letter Q4"
         },
         {
-          html: "<a href='#' class='govuk-link'>View</a>"
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
         },
         {
-          html: "<a href='#' class='govuk-link'>Download</a>"
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
         }
       ],
       [
         {
-          text: "4"
+          text: "7 Dec 2025"
         },
         {
-          text: "Remittance Advice EPR 2024 Q4"
+          text: "Remittance letter Q4"
         },
         {
-          html: "<a href='#' class='govuk-link'>View</a>"
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
         },
         {
-          html: "<a href='#' class='govuk-link'>Download</a>"
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
         }
       ],
       [
         {
-          text: "1 to 3"
+          text: "19 Sep 2025"
         },
         {
-          text: "Grant determination letter EPR 2024 Q1 to Q3"
+          text: "Grant letter Q3"
         },
         {
-          html: "<a href='#' class='govuk-link'>View</a>"
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Sep 2025 Grant letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
         },
         {
-          html: "<a href='#' class='govuk-link'>Download</a>"
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>19 Sep 2025 Grant letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
         }
       ],
       [
         {
-          text: "4"
+          text: "18 Sep 2025"
         },
         {
-          text: "Remittance Advice EPR 2024 Q1 to Q3"
+          text: "Remittance letter Q3"
         },
         {
-          html: "<a href='#' class='govuk-link'>View</a>"
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
         },
         {
-          html: "<a href='#' class='govuk-link'>Download</a>"
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
         }
       ]
     ]

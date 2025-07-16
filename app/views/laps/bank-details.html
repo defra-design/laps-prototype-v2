@@ -7,6 +7,25 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    .custom-flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Aligns children to the top */
+      padding: 1rem 0;
+      
+    }
+
+    .left-box,
+    .right-box {
+      flex: 0 0 auto;
+    }
+  </style>
+{% endblock %}
+
+
 {% block beforeContent %}
 {{ super() }}
 <div class="govuk-width-container">
@@ -47,20 +66,47 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          Your local authority bank details
-        </div>
-        <div class="govuk-task-list__status" id="company-details-1-status">
-          <strong class="govuk-tag govuk-tag--red">
-            UNCONFIRMED
-          </strong>
-        </div>
-      </li>
-    </ul>
+
+    <div class="custom-flex-wrapper">
+      <div class="left-box">
+        <h2 class="govuk-heading-m">Your local authority's bank details</h2>
+      </div>
+      <div class="right-box">
+        <strong class="govuk-tag govuk-tag--green">
+          CONFIRMED
+        </strong>
+      </div>
+    </div>
 
     {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "ending with 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "ending with 112"
+          }
+        }
+      ]
+    }) }}
+    <!-- {{ govukSummaryList({
       rows: [
         {
           key: {
@@ -87,14 +133,21 @@
           }
         }
       ]
-    }) }}
+    }) }} -->
 
+  {{ govukDetails({
+    summaryText: "These details are incorrect",
+    html: "<p class='govuk-body'>To update your local authority's bank details, contact the helpdesk.</p>
+            <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
+            <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
+            We aim to respond within 20 working days
+            </p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
+            0300 060 0002<br>
+            Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>"
+  }) }}
   </div>
 </div>
-
-{{ govukDetails({
-  summaryText: "These details are incorrect",
-  text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
-}) }}
 
 {% endblock %}
