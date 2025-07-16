@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "LAPs home",
+            href: "/laps/home-page"
+          },
+          {
+            text: "Get help"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+  {{ govukPanel({
+    titleText: "Bank details confirmed"
+  }) }}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">Your local authority's bank details have been confirmed.</p>
+
+    <form method="post" action="/">
+      <div class="govuk-form-group">
+        <input class="govuk-input" id="page-redirect" name="user-type" type="text" value="bank-details" required hidden>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Go back to Bank details
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

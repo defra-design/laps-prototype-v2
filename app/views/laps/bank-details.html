@@ -61,23 +61,69 @@
 
 {% block content %}
 
-<span class="govuk-caption-xl">Glamshire County Council</span>
-<h1 class="govuk-heading-xl">Bank details</h1>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+  {% if data['user-type'] == 'head-of-finance' %}
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        Please confirm your local authority's bank details.
+        <a class="govuk-notification-banner__link" href="/laps/confirm-bank-details">Confirm bank details</a>
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+  
+  {% endif %}
+
+  <span class="govuk-caption-xl">Glamshire County Council</span>
+  <h1 class="govuk-heading-xl">Bank details</h1>
 
     <div class="custom-flex-wrapper">
       <div class="left-box">
         <h2 class="govuk-heading-m">Your local authority's bank details</h2>
       </div>
       <div class="right-box">
+        <strong class="govuk-tag govuk-tag--red">
+          UNCONFIRMED
+        </strong>
         <strong class="govuk-tag govuk-tag--green">
           CONFIRMED
         </strong>
       </div>
     </div>
-
+  {% if (data['user-type'] == 'head-of-finance') or (data['user-type'] == 'ceo') %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "12 34 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "78910112"
+          }
+        }
+      ]
+    }) }}
+    {% else %}
     {{ govukSummaryList({
       rows: [
         {
@@ -106,34 +152,7 @@
         }
       ]
     }) }}
-    <!-- {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Account name"
-          },
-          value: {
-            text: "Glamshire County Council"
-          }
-        },
-        {
-          key: {
-            text: "Sort code"
-          },
-          value: {
-            text: "12 34 56"
-          }
-        },
-        {
-          key: {
-            text: "Account number"
-          },
-          value: {
-            text: "78910112"
-          }
-        }
-      ]
-    }) }} -->
+  {% endif %}
 
   {{ govukDetails({
     summaryText: "These details are incorrect",

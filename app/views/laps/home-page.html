@@ -1,4 +1,5 @@
 {% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -35,7 +36,21 @@
 
 {% block content %}
 
-<span class="govuk-caption-xl">Local Authority Payments (LAPs) home</span>
+  {% if data['user-type'] == 'head-of-finance' %}
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        Please confirm your local authority's bank details.
+        <a class="govuk-notification-banner__link" href="#">Confirm bank details</a>
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+  
+  {% endif %}
+
+<span class="govuk-caption-xl">Local Authority Payments (LAPs) home - {{ data['user-type'] }}</span>
 <h1 class="govuk-heading-xl">Glamshire County Council</h1>
 
 <div class="govuk-grid-row">
