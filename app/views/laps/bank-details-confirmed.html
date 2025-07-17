@@ -40,22 +40,24 @@
 
 {% block content %}
 
-  {{ govukPanel({
-    titleText: "Bank details confirmed"
-  }) }}
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Bank details confirmed"
+    }) }}
+
     <p class="govuk-body">Your local authority's bank details have been confirmed.</p>
 
-    <form method="post" action="/">
-      <div class="govuk-form-group">
-        <input class="govuk-input" id="page-redirect" name="user-type" type="text" value="bank-details" required hidden>
-      </div>
+    <form method="post" action="/laps/bank-details-confirmed">
 
       <button class="govuk-button" data-module="govuk-button" type="submit">
-        Go back to Bank details
+        {% if data['confirm-bank-details-referrer'] == 'bank-details' %}
+          Go back to Bank details
+        {% elif data['confirm-bank-details-referrer'] == 'home-page' %}
+          Go back to Home page
+        {% else %}
+          Go back to Home page
+        {% endif %}
       </button>
     </form>
   </div>

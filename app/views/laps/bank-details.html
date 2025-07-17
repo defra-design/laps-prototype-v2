@@ -64,7 +64,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-  {% if data['user-type'] == 'head-of-finance' %}
+  {% if data['user-type'] == 'head-of-finance' and (data['confirm-bank-details'] != 'confirmed') %}
     {% set html %}
       <p class="govuk-notification-banner__heading">
         Please confirm your local authority's bank details.
@@ -86,12 +86,15 @@
         <h2 class="govuk-heading-m">Your local authority's bank details</h2>
       </div>
       <div class="right-box">
-        <strong class="govuk-tag govuk-tag--red">
-          UNCONFIRMED
-        </strong>
-        <strong class="govuk-tag govuk-tag--green">
-          CONFIRMED
-        </strong>
+        {% if data['confirm-bank-details'] == 'confirmed' %}
+          <strong class="govuk-tag govuk-tag--green">
+            CONFIRMED
+          </strong>
+        {% else %}
+          <strong class="govuk-tag govuk-tag--red">
+            UNCONFIRMED
+          </strong>
+        {% endif %}
       </div>
     </div>
   {% if (data['user-type'] == 'head-of-finance') or (data['user-type'] == 'ceo') %}
