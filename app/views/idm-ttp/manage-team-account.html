@@ -1,0 +1,169 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "LAPs home",
+            href: "/laps/home-page"
+          },
+          {
+            text: "Payment documents"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Manage team access</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post" action="">
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Add a team member
+        </button>
+      </form>
+      <p class="govuk-heading-m">All members (1)</p>
+      <p class="govuk-body">To view more information about a team member, including their service roles, or to add them to a service, go to 'Manage' next to their status</p>
+    </div>
+  </div>
+  
+  {{ govukSelect({
+    id: "sort",
+    name: "sort",
+    label: {
+      text: "Financial year"
+    },
+    items: [
+      {
+        value: "published",
+        text: "2025 to 2026",
+        selected: true
+      },
+      {
+        value: "updated",
+        text: "2024 to 2025"
+      }
+    ]
+  }) }}
+
+  {{ govukTable({
+    caption: "Team member details",
+    captionClasses: "govuk-visually-hidden",
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: "Name"
+      },
+      {
+        text: "Email address"
+      },
+      {
+        text: "Account role"
+      },
+      {
+        text: "Status"
+      },
+      {
+        html: "<span class='govuk-visually-hidden'>Manage</span>"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Joe Bloggs"
+        },
+        {
+          text: "joe.bloggs@glamshirecountycouncil.gov.uk"
+        },
+        {
+          text: "owner"
+        },
+        {
+          html: "<strong class="govuk-tag govuk-tag--blue">Live</strong>"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ],
+      [
+        {
+          text: "7 Dec 2025"
+        },
+        {
+          text: "Remittance letter Q4"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ],
+      [
+        {
+          text: "19 Sep 2025"
+        },
+        {
+          text: "Grant letter Q3"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Sep 2025 Grant letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>19 Sep 2025 Grant letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ],
+      [
+        {
+          text: "18 Sep 2025"
+        },
+        {
+          text: "Remittance letter Q3"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ]
+    ]
+  }) }}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "LAPs home",
+            href: "/laps/home-page"
+          },
+          {
+            text: "Get help"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Glamshire County Council</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/payment-documents">Manage team access</a></h2>
+      <p class="govuk-heading-xl">1</p>
+      <p class="govuk-body"><a class="govuk-link" href="/laps/payment-documents">Manage team access</a></p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/bank-details">Manage your organisation</a></h2>
+      <p class="govuk-heading-xl">1</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <h2 class="govuk-heading-l">Your registered services</h2>
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/get-help">Local Authority Payments (LAPs)</a></h2>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
