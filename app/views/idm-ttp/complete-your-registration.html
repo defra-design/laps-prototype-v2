@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            What's your local authority email address
+          </label>
+        </h1>
+        <div class="govuk-inset-text">
+          This must be the email address you use at Glamshire County Council.
+        </div>
+        <div id="event-name-hint" class="govuk-hint">
+          We will send a one-time passcode to this email address.
+        </div>
+        <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+      </div>
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

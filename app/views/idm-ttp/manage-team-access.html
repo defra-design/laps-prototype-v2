@@ -15,11 +15,11 @@
       {{ govukBreadcrumbs({
         items: [
           {
-            text: "LAPs home",
-            href: "/laps/home-page"
+            text: "Defra home",
+            href: "/idm-ttp/manage-account"
           },
           {
-            text: "Payment documents"
+            text: "Manage team"
           }
         ]
       }) }}
@@ -55,25 +55,6 @@
       <p class="govuk-body">To view more information about a team member, including their service roles, or to add them to a service, go to 'Manage' next to their status</p>
     </div>
   </div>
-  
-  {{ govukSelect({
-    id: "sort",
-    name: "sort",
-    label: {
-      text: "Financial year"
-    },
-    items: [
-      {
-        value: "published",
-        text: "2025 to 2026",
-        selected: true
-      },
-      {
-        value: "updated",
-        text: "2024 to 2025"
-      }
-    ]
-  }) }}
 
   {{ govukTable({
     caption: "Team member details",
@@ -108,62 +89,27 @@
           text: "owner"
         },
         {
-          html: "<strong class="govuk-tag govuk-tag--blue">Live</strong>"
+          html: "<strong class='govuk-tag govuk-tag--blue'>Live</strong>"
         },
         {
-          html: "<a href='#' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "7 Dec 2025"
-        },
-        {
-          text: "Remittance letter Q4"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "19 Sep 2025"
-        },
-        {
-          text: "Grant letter Q3"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Sep 2025 Grant letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>19 Sep 2025 Grant letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "18 Sep 2025"
-        },
-        {
-          text: "Remittance letter Q3"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+          html: "<a href='/idm-ttp/manage-team-member' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
           classes: "govuk-table__cell--numeric"
         }
       ]
     ]
+  }) }}
+
+    {{ govukDetails({
+    summaryText: "What are account roles?",
+    html: "<p class='govuk-body'>To update your local authority's bank details, contact the helpdesk.</p>
+            <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
+            <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
+            We aim to respond within 20 working days
+            </p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
+            0300 060 0002<br>
+            Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>"
   }) }}
 
 {% endblock %}

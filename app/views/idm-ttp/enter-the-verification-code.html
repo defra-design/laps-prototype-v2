@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            Enter the verification code
+          </label>
+        </h1>
+        <div class="govuk-inset-text">
+          We have sent a 6-digit verification code to joe.bloggs@glamshirecountycouncil.gov.uk
+        </div>
+        <div id="event-name-hint" class="govuk-hint">
+          It may take a few minutes to arrive and will expire in 10 minutes.
+        </div>
+
+        {{ govukDetails({
+          summaryText: "If the verification code has not arrived",
+          text: "We need to know your nationality so we can work out which elections you're entitled to vote in. If you cannot provide your nationality, you'll have to send copies of identity documents through the post."
+        }) }}
+        <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Request a new code</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
