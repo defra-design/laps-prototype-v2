@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Registration of Glamshire County Council confirmed"
+    }) }}
+
+    <p class="govuk-body">We have sent an email confirmation to 
+    <span class="govuk-!-font-weight-bold"> joe.bloggs@glamshirecountycouncil.gov.uk</span> </p>
+    <p class="govuk-body">You now have access to Local Authority Payments (LAPs) on behalf of 
+    Glamshire County Council.</p>
+    <h2 class="govuk-heading-m"> What you need to do next </h2>
+    <p class="govuk-body">You should add other team members to Glamshire County Council and 
+    manage team access to Local Authority Payments (LAPs). </p>
+    <p class="govuk-body">To add team members, you will need to tell us: </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>their local authority email address </li>
+      <li>what service role they wil have on Local Authority Payments (LAPs) </li>
+      <li>if they will be an administrator for the organisation </li>
+    </ul>
+    <p class="govuk-body">You can continue to your account if you do not want to add team members 
+    right now.</p>
+
+    <p class="govuk-body">
+      <a href='/idm-ttp/manage-team-access' class='govuk-link'>Manage team access</a>
+    </p>
+    <p class="govuk-body">
+      <a href='/idm/manage-account' class='govuk-link'>Continue to your account</a>
+    </p>
+
+    <!-- <form method="post" action="">
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit" value="save">
+          Manage team access
+        </button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit">
+          Continue to your account
+        </button>
+      </div>
+    </form> -->
+  </div>
+</div>
+
+{% endblock %}
