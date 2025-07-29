@@ -10,17 +10,7 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <!-- {{ govukBreadcrumbs({
-        items: [
-          {
-            text: "LAPs home",
-            href: "/laps/home-page"
-          },
-          {
-            text: "Get help"
-          }
-        ]
-      }) }} -->
+
     </div>
     <div class="govuk-grid-column-one-third">
       {{
@@ -54,9 +44,9 @@
         {% if data['confirm-bank-details-referrer'] == 'bank-details' %}
           Go back to Bank details
         {% elif data['confirm-bank-details-referrer'] == 'home-page' %}
-          Go back to Home page
+          Go back to LAPs home
         {% else %}
-          Go back to Home page
+          Go back to LAPs home
         {% endif %}
       </button>
     </form>
