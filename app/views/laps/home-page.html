@@ -36,12 +36,13 @@
 
 {% block content %}
 
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
   {% if (data['user-type'] == 'head-of-finance') and (data['confirm-bank-details'] != 'confirmed') %}
     {% set html %}
       <p class="govuk-notification-banner__heading">
-        Please confirm your local authority's bank details.
+        Please confirm your local authority's bank details.<br>
         <a class="govuk-notification-banner__link" href="/laps/confirm-bank-details">View and confirm bank details</a>
       </p>
     {% endset %}
@@ -51,6 +52,8 @@
     }) }}
   
   {% endif %}
+  </div>
+</div>
     
 <span class="govuk-caption-xl">Local Authority Payments (LAPs) home</span>
 <h1 class="govuk-heading-xl">Glamshire County Council</h1>
