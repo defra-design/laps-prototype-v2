@@ -46,8 +46,16 @@
         </div>
 
         {{ govukDetails({
-          summaryText: "If the verification code has not arrived",
-          text: "We need to know your nationality so we can work out which elections you're entitled to vote in. If you cannot provide your nationality, you'll have to send copies of identity documents through the post."
+             summaryText: "These details are incorrect",
+            html: "<p class='govuk-body'>It might take a few minutes for the email to arrive. The subject line is ‘Verify your email address’.</p>
+            <p class='govuk-body'>If the email is not in your inbox, check your spam or junk folder.</p>
+            <p class='govuk-body'>If you still have not received it, or your code has expired, you will need to 
+              <a href='#' class='govuk-link'>request a new code.</a>
+          
+            <p class='govuk-body'>You may also want to check that you have correctly entered your email address. If it’s incorrect,you can
+              <a href='complete-your-registration.html' class='govuk-link'>re-enter your email address.</a><br>"
+
+
         }) }}
         <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint">
       </div>
