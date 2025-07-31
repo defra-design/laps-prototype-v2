@@ -10,8 +10,19 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // router.get('*', (req, res, next) => {
 //     console.log('session: ', JSON.stringify(req.session.data));
+//     const showError = req.query;
+//     console.log('urlquery: ', showError);
 //     next()
 // })
+
+
+// router.get('/:page', (req, res) => {
+//   const page = req.params.page;
+
+//   // Optional: check if the template exists or handle errors
+//   res.render(`${page}.njk`, { page });
+// });
+
 
 router.get('/', (req, res) => {
     // Reset session data

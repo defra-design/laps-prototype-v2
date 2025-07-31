@@ -2,6 +2,8 @@
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -64,12 +66,24 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-  <span class="govuk-caption-xl">Glamshire County Council</span>
-
-    <div class="govuk-form-group">
+    <div class="govuk-form-group {% if data['error'] == 'true' %}govuk-form-group--error{% endif %}">
       <form method="post" action="/laps/confirm-bank-details">
       <fieldset class="govuk-fieldset" aria-describedby="confirm-bank-details">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          
+          {% if data['error'] == 'true' %}
+          {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: [
+              {
+                text: "Confirm these details are correct",
+                href: "#confirm-bank-details"
+              }
+            ]
+          }) }}
+          {% endif %}
+
+          <span class="govuk-caption-xl">Glamshire County Council</span>
           <h1 class="govuk-fieldset__heading">
             Confirm your local authority's bank details
           </h1>
@@ -104,6 +118,11 @@
           ]
         }) }}
     
+        {% if data['error'] == 'true' %}
+        <p id="countries-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Confirm these details are correct
+        </p>
+        {% endif %}
         <div class="govuk-checkboxes govuk-!-margin-bottom-4" data-module="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="confirm-bank-details" name="confirm-bank-details" type="checkbox" value="confirmed">
