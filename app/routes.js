@@ -86,7 +86,7 @@ router.post('/idm-ttp/confirm-details', (req, res) => {
     res.redirect("/idm-ttp/registration-confirmed");
 })
 
-router.post('/idm-ttp/choose-service', (req, res) => {
+router.post('/idm-ttp/add-team-member', (req, res) => {
     res.redirect("/idm-ttp/what-we-need");
 })
 
