@@ -78,6 +78,19 @@
   
   {% endif %}
 
+  {% if data['user-type'] == 'ceo' and (data['confirm-bank-details'] != 'confirmed') %}
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        The nominated Head of Finance will need to confirm your local authority's bank details.
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+  
+  {% endif %}
+
   <span class="govuk-caption-xl">Glamshire County Council</span>
   <h1 class="govuk-heading-xl">Bank details</h1>
 
