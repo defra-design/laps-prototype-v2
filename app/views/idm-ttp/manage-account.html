@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/idm-main.html" %}
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -12,7 +12,10 @@
       {{ govukBreadcrumbs({
         items: [
           {
-            text: "Defra home"
+            text: "Defra home",
+            href: "#"
+          },{
+            text: "Glamshire County Council"
           }
         ]
       }) }}
