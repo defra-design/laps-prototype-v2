@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/idm-sign-up.html" %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {% block pageTitle %}
@@ -10,6 +10,12 @@
 <div class="govuk-width-container">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+    {{ govukBackLink({
+      text: "Back",
+      href: "manage-team-access"
+    }) }}
     </div>
     <div class="govuk-grid-column-one-third">
       {{
