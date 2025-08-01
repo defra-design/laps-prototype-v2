@@ -94,6 +94,14 @@ router.post('/idm-ttp/what-we-need', (req, res) => {
     res.redirect("/idm-ttp/add-team-member/whats-their-la-email");
 })
 
+router.post('/idm-ttp/add-team-member/whats-their-la-email', (req, res) => {
+    res.redirect("/idm-ttp/service-role");
+})
+
+router.post('/idm-ttp/service-role', (req, res) => {
+    res.redirect("/idm-ttp/admin");
+})
+
 
 
 
