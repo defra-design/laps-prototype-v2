@@ -1,0 +1,64 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Added to your team members"
+    }) }}
+
+    <p class="govuk-body">We have sent  
+    <span class="govuk-!-font-weight-bold"> joe.bloggs@glamshirecountycouncil.gov.uk</span> an email inviting them to access Local Authority Payments (LAPs) on behalf of Glamshire County Council.</p>
+    <p class="govuk-body">They will show as  
+    <span class="govuk-!-font-weight-bold"> invited </span> until they log in and complete their registration.</p>
+    <h2 class="govuk-heading-m"> What you can do next </h2>
+    <p class="govuk-body">You can add other team members to Glamshire County Council and manage team access to Local Authority Payments (LAPs), or you can do this later in your Defra account. </p>
+    <p class="govuk-body">You can continue to your account if you do not want to add more team members right now. </p>
+
+    <div class="govuk-button-group">
+  {{ govukButton({
+        text: "Continue to your account",
+    href: "/idm-ttp/your-defra-account"
+    
+  }) }}
+
+  {{ govukButton({
+    text: "Manage team access",
+    href: "manage-team-access",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>
+
+  </div>
+</div>
+
+{% endblock %}
