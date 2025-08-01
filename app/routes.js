@@ -95,10 +95,10 @@ router.post('/idm-ttp/what-we-need', (req, res) => {
 })
 
 router.post('/idm-ttp/add-team-member/whats-their-la-email', (req, res) => {
-    res.redirect("/idm-ttp/service-role");
+    res.redirect("/idm-ttp/add-team-member/service-role");
 })
 
-router.post('/idm-ttp/service-role', (req, res) => {
+router.post('/idm-ttp/add-team-member/service-role', (req, res) => {
     res.redirect("/idm-ttp/admin");
 })
 
