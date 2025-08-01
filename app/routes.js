@@ -106,7 +106,7 @@ router.post('/idm-ttp/admin', (req, res) => {
     res.redirect("/idm-ttp/check-answers");
 })
 
-router.post('/idm-ttp/check-answersadmin', (req, res) => {
+router.post('/idm-ttp/check-answers', (req, res) => {
     res.redirect("/idm-ttp/team-member-added");
 })
 
