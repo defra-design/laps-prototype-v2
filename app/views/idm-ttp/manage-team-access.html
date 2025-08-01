@@ -61,10 +61,11 @@
     </div>
   </div>
 
+  
   {{ govukTable({
     caption: "Team member details",
     captionClasses: "govuk-visually-hidden",
-    firstCellIsHeader: true,
+    firstCellIsHeader: false,
     head: [
       {
         text: "Name"
@@ -91,7 +92,7 @@
           text: "joe.bloggs@glamshirecountycouncil.gov.uk"
         },
         {
-          text: "owner"
+          text: "Nominated owner"
         },
         {
           html: "<strong class='govuk-tag govuk-tag--blue'>Live</strong>"
@@ -104,17 +105,16 @@
     ]
   }) }}
 
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     {{ govukDetails({
     summaryText: "What are account roles?",
-    html: "<p class='govuk-body'>To update your local authority's bank details, contact the helpdesk.</p>
-            <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
-            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
-            <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
-            We aim to respond within 20 working days
-            </p>
-            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
-            0300 060 0002<br>
-            Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>"
+    html: "<p class='govuk-body'>Account roles control what you can do within your Defra account. They let you manage access and permissions for your organisation.</p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Nominated Owner</span> - accountable for the organisation and can invite users, assign roles, manage access for others and use services they have access to</p>
+           <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Administrator</span> - can invite users, assign roles, manage access for others and use services they have access to</p>
+           <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Standard User</span> - can sign in and use services they've been given access to</p>"
   }) }}
+  <div>
+  </div>
 
 {% endblock %}

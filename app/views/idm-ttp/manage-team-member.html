@@ -51,6 +51,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   {{ govukSummaryList({
+    classes: "govuk-summary-list--no-border",
     rows: [
       {
         key: {
@@ -75,7 +76,12 @@
         value: {
           text: "xxxx xxx xxx"
         }
-      },
+      }
+    ]
+  }) }}
+    {{ govukSummaryList({
+    classes: "govuk-summary-list--no-border",
+    rows: [
       {
         key: {
           text: "Account"
@@ -99,8 +105,10 @@
 </div>
 
   {{ govukTable({
+    
     caption: "Service access",
-    firstCellIsHeader: true,
+    captionClasses: "govuk-table__caption--l",
+    firstCellIsHeader: false,
     head: [
       {
         text: "Service"

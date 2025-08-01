@@ -45,12 +45,12 @@
               text: "Full name"
             },
             value: {
-              text: "Email address"
+              text: "Joe Bloggs"
             }
           },
           {
             key: {
-              text: "Joe Bloggs"
+              text: "Email address"
             },
             value: {
               text: "joe.blogggs@glamshirecountycouncil.gov.uk"
@@ -61,15 +61,7 @@
       <p class="govuk-body"><a href='/idm-ttp/manage-team-member' class='govuk-link'>Update details</a></p>
       {{ govukDetails({
         summaryText: "Contact support ID",
-        html: "<p class='govuk-body'>To update your local authority's bank details, contact the helpdesk.</p>
-                <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
-                <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
-                <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
-                We aim to respond within 20 working days
-                </p>
-                <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
-                0300 060 0002<br>
-                Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>"
+        html: "<p class='govuk-body'>If you contact us, you will need your contact support ID. BA202534-V1-4501-G5-0712</p>"
       }) }}
     </div>
   </div>
@@ -78,7 +70,7 @@
   {{ govukTable({
     caption: "Your accounts",
     captionClasses: "govuk-visually-hidden",
-    firstCellIsHeader: true,
+    firstCellIsHeader: false,
     head: [
       {
         text: "Account"
