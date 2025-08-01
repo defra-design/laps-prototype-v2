@@ -52,23 +52,27 @@
     <p class="govuk-body">You can continue to your account if you do not want to add team members 
     right now.</p>
 
-    <p class="govuk-body">
+    <!-- <p class="govuk-body">
       <a href='/idm-ttp/manage-team-access' class='govuk-link'>Manage team access</a>
     </p>
     <p class="govuk-body">
       <a href='/idm/manage-account' class='govuk-link'>Continue to your account</a>
-    </p>
+    </p> -->
 
-    <!-- <form method="post" action="">
-      <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button" type="submit" value="save">
-          Manage team access
-        </button>
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit">
-          Continue to your account
-        </button>
-      </div>
-    </form> -->
+
+    <div class="govuk-button-group">
+  {{ govukButton({
+    text: "Manage team access",
+    href: "manage-team-access"
+  }) }}
+
+  {{ govukButton({
+    text: "Continue to your account",
+    href: "/idm-ttp/your-defra-account",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>
+
   </div>
 </div>
 
