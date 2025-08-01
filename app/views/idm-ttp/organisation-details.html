@@ -44,8 +44,12 @@
 {% block content %}
 <h1 class="govuk-heading-xl">Glamshire County Council</h1>
 
-  <h2 class="govuk-heading-m">Organisation address</h2>
-  <div class="govuk-grid-row">
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+
+{% set OrgAddHtml %}
+<h2 class="govuk-heading-m">Organisation address</h2>
+
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-full custom-container-card">
       <div class="custom-card">
       {{ govukSummaryList({
@@ -65,7 +69,20 @@
       }) }}
       </div>
     </div>
-
   </div>
+
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Organisation address",
+      id: "past-day",
+      panel: {
+        html: OrgAddHtml
+      }
+    }
+  ]
+}) }}
 
 {% endblock %}
