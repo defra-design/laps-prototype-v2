@@ -4,7 +4,7 @@
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Payment documents – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -44,123 +44,123 @@
 <span class="govuk-caption-xl">Glamshire County Council</span>
 <h1 class="govuk-heading-xl">Payment documents</h1>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-visually-hidden">Warning</span>
-          For the 2025 to 2026 financial year, there will be a single payment covering quarters 1, and 2.
-        </strong>
-      </div>
-
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        For the 2025 to 2026 financial year, there will be a single payment covering quarters 1, and 2.
+      </strong>
     </div>
-  </div>
-  
-  {{ govukSelect({
-    id: "sort",
-    name: "sort",
-    label: {
-      text: "Financial year"
-    },
-    items: [
-      {
-        value: "published",
-        text: "2025 to 2026",
-        selected: true
-      },
-      {
-        value: "updated",
-        text: "2024 to 2025"
-      }
-    ]
-  }) }}
 
-  {{ govukTable({
-    caption: "Financial documents",
-    captionClasses: "govuk-visually-hidden",
-    firstCellIsHeader: false,
-    head: [
+  </div>
+</div>
+  
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Financial year"
+  },
+  items: [
+    {
+      value: "published",
+      text: "2025 to 2026",
+      selected: true
+    },
+    {
+      value: "updated",
+      text: "2024 to 2025"
+    }
+  ]
+}) }}
+
+{{ govukTable({
+  caption: "Financial documents",
+  captionClasses: "govuk-visually-hidden",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Date"
+    },
+    {
+      text: "Document name"
+    },
+    {
+      html: "<span class='govuk-visually-hidden'>Download document</span>"
+    },
+    {
+      html: "<span class='govuk-visually-hidden'>View document</span>"
+    }
+  ],
+  rows: [
+    [
       {
-        text: "Date"
+        text: "9 Dec 2025"
       },
       {
-        text: "Document name"
+        text: "Grant letter Q4"
       },
       {
-        html: "<span class='govuk-visually-hidden'>Download document</span>"
+        html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
+        classes: "govuk-table__cell--numeric"
       },
       {
-        html: "<span class='govuk-visually-hidden'>View document</span>"
+        html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
+        classes: "govuk-table__cell--numeric"
       }
     ],
-    rows: [
-      [
-        {
-          text: "9 Dec 2025"
-        },
-        {
-          text: "Grant letter Q4"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>9 Dec 2025 Grant letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "7 Dec 2025"
-        },
-        {
-          text: "Remittance letter Q4"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "19 Sep 2025"
-        },
-        {
-          text: "Grant letter Q3"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Sep 2025 Grant letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>19 Sep 2025 Grant letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ],
-      [
-        {
-          text: "18 Sep 2025"
-        },
-        {
-          text: "Remittance letter Q3"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        },
-        {
-          html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
-          classes: "govuk-table__cell--numeric"
-        }
-      ]
+    [
+      {
+        text: "7 Dec 2025"
+      },
+      {
+        text: "Remittance letter Q4"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+        classes: "govuk-table__cell--numeric"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>7 Dec 2025 Remittance letter Q4</span></a>",
+        classes: "govuk-table__cell--numeric"
+      }
+    ],
+    [
+      {
+        text: "19 Sep 2025"
+      },
+      {
+        text: "Grant letter Q3"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>9 Sep 2025 Grant letter Q3</span></a>",
+        classes: "govuk-table__cell--numeric"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>19 Sep 2025 Grant letter Q3</span></a>",
+        classes: "govuk-table__cell--numeric"
+      }
+    ],
+    [
+      {
+        text: "18 Sep 2025"
+      },
+      {
+        text: "Remittance letter Q3"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>Download <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+        classes: "govuk-table__cell--numeric"
+      },
+      {
+        html: "<a href='#' class='govuk-link'>View (opens in a new tab) <span class='govuk-visually-hidden'>18 Sep 2025 Remittance letter Q3</span></a>",
+        classes: "govuk-table__cell--numeric"
+      }
     ]
-  }) }}
+  ]
+}) }}
 
 {% endblock %}

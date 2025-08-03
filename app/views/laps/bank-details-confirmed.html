@@ -2,7 +2,7 @@
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Bank details confirmed – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -38,18 +38,14 @@
 
     <p class="govuk-body">Your local authority's bank details have been confirmed.</p>
 
-    <form method="post" action="/laps/bank-details-confirmed">
+    {% if data['confirm-bank-details-referrer'] == 'bank-details' %}
+      <a href='/laps/bank-details' class='govuk-link'>Go back to Bank details</a>
+    {% elif data['confirm-bank-details-referrer'] == 'home-page' %}
+      <a href='/laps/home-page' class='govuk-link'>Go back to LAPs home</a>
+    {% else %}
+      <a href='/laps/home-page' class='govuk-link'>Go back to LAPs home</a>
+    {% endif %}
 
-      <button class="govuk-button" data-module="govuk-button" type="submit">
-        {% if data['confirm-bank-details-referrer'] == 'bank-details' %}
-          Go back to Bank details
-        {% elif data['confirm-bank-details-referrer'] == 'home-page' %}
-          Go back to LAPs home
-        {% else %}
-          Go back to LAPs home
-        {% endif %}
-      </button>
-    </form>
   </div>
 </div>
 
