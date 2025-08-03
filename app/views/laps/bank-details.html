@@ -1,15 +1,16 @@
 {% extends "layouts/main.html" %}
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Bank details – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block stylesheets %}
   {{ super() }}
   <style>
+    /* Layout for confirmed/unconfirmed tag */
+    /* To do - this breaks on mobile width */
     .custom-flex-wrapper {
       display: flex;
       justify-content: space-between;
@@ -94,22 +95,22 @@
   <span class="govuk-caption-xl">Glamshire County Council</span>
   <h1 class="govuk-heading-xl">Bank details</h1>
 
-    <div class="custom-flex-wrapper">
-      <div class="left-box">
-        <h2 class="govuk-heading-m">Your local authority's bank details</h2>
-      </div>
-      <div class="right-box">
-        {% if data['confirm-bank-details'] == 'confirmed' %}
-          <strong class="govuk-tag govuk-tag--green">
-            CONFIRMED
-          </strong>
-        {% else %}
-          <strong class="govuk-tag govuk-tag--red">
-            UNCONFIRMED
-          </strong>
-        {% endif %}
-      </div>
+  <div class="custom-flex-wrapper">
+    <div class="left-box">
+      <h2 class="govuk-heading-m">Your local authority's bank details</h2>
     </div>
+    <div class="right-box">
+      {% if data['confirm-bank-details'] == 'confirmed' %}
+        <strong class="govuk-tag govuk-tag--green">
+          CONFIRMED
+        </strong>
+      {% else %}
+        <strong class="govuk-tag govuk-tag--red">
+          UNCONFIRMED
+        </strong>
+      {% endif %}
+    </div>
+  </div>
   {% if (data['user-type'] == 'head-of-finance') or (data['user-type'] == 'ceo') %}
     {{ govukSummaryList({
       rows: [
