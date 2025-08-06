@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/index-page.html" %}
 
 {% set pageName="Home" %}
 
@@ -17,103 +17,211 @@
       </strong></h2>
     <p class="govuk-body">Local Authority Payments (LAPs) is the digital journey within pEPR that enables local authorities in the UK to engage with the scheme and receive fair compensation for their work in managing packaging waste.</p>
 
-    <!-- SECTION ONE -->
+   
 
-    <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m govuk-link-">Standard user and Head of Waste</h2>
-      <p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
+<!-- SECTION ONE -->
+
+<div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">CEO</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
           To be signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-        <p class="govuk-body">Head of Waste, finance officers or waste officers</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
-        <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
-        <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
-        <li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li>
-        <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>
-      </ul>
-    </div>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Local Authority Payments (LAPs) journey for CEO. The CEO can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>view and download payment documents</li>
+          <li>view bank details</li>
+          <li>view guidance and raise support requests</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced"><li><a class="govuk-link" href="#">Something</a></li></ul>'
+      }
+    }
+  ]
+}) }}
 
-    <!-- SECTION TWO -->
-
-    <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m govuk-link-">CEO User</h2>
-      <p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
-          To be signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
-          Updated July 2025
-        </strong></p>
-      <p class="govuk-body">CEO can view full bank details</p>
-
-      <form method="post" action="/">
+<form method="post" action="/">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
         </div>
 
-        <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start CEO Journey
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start CEO LAPs Journey
         </button>
       </form>
+ 
     </div>
 
-    <!-- SECTION THREE -->
 
-    <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m govuk-link-">Head of Finance User</h2>
-      <p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
+<!-- SECTION TWO -->
+
+ <div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">Head of Finance</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
           To be signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-      <p class="govuk-body">HoF can view full bank details and has to confirm them</p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Finance. The Head of Finance can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>view and download payment documents</li>
+          <li>view and confirm bank details</li>
+          <li>view guidance and raise support requests</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced"><li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li></ul>'
+      }
+    }
+  ]
+}) }}
 
-      <form method="post" action="/">
+<form method="post" action="/">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="text" value="head-of-finance" required hidden>
         </div>
 
-        <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start HoF Journey
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start HoF LAPs Journey
         </button>
       </form>
+
     </div>
 
-    <!-- SECTION FOUR -->
 
-    <p class="govuk-body govuk-!-margin-bottom-4"></p>
+<!-- SECTION THREE -->
 
     <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m"> Common shutter pages for the service</h2>
-      <p class="govuk-body"><strong class="govuk-tag govuk-tag--red">
+      <h2 class="govuk-heading-m govuk-link-">Head of Waste</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
           To be signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Waste. The Head of Waste can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>view and download payment documents</li>
+          <li>view masked bank details</li>
+          <li>view guidance and raise support requests</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
+        <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
+        <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
+        <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>'
+      }
+    }
+  ]
+}) }}
 
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<form method="post" action="/">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+        </div>
 
-      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start HoW LAPs Journey
+        </button>
+      </form>
 
-        <li>
-          <a class="govuk-link" href="/shutter-pages/problem-with-the-service">Sorry, there is a problem with the
-            service</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/shutter-pages/page-not-found">Page not found</a>
-        </li>
-
-        <li>
-          <a class="govuk-link" href="/shutter-pages/service-is-unavilable">Sorry, the service is unavailable</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/shutter-pages/service-timeout">Service timeout</a>
-        </li>
-      </ul>
     </div>
 
-    <!-- IDM TTP -->
+    
+<!-- SECTION FOUR -->
+
+<div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">Finance and Waste Officers</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
+          To be signed off
+        </strong> <strong class="govuk-tag govuk-tag--pink">
+          Updated July 2025
+        </strong></p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Local Authority Payments (LAPs) journey for Finance and Waste Officers. The Finance and Waste Officers can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>view and download payment documents</li>
+          <li>view masked bank details</li>
+          <li>view guidance and raise support requests</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
+        <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
+        <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
+        <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>'
+      }
+    }
+  ]
+}) }}
+
+<form method="post" action="/">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+        </div>
+
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start FO / WO LAPs Journey
+        </button>
+      </form>
+
+    </div>
+
+     
+<!-- IDM TTP -->
+
+ <h2 class="govuk-heading-m">Identity Management (IDM)</h2>
 
     <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
@@ -138,6 +246,33 @@
         
       </ul>
     </div>
+
+
+<!-- SHUTTER PAGES -->
+
+<h2 class="govuk-heading-m">Shutter pages</h2>
+    <p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+    <div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m"> Common shutter pages for the service</h2>
+      <p class="govuk-body"><strong class="govuk-tag govuk-tag--red">
+          To be signed off
+        </strong> <strong class="govuk-tag govuk-tag--pink">
+          Updated July 2025
+        </strong></p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+        <li><a class="govuk-link" href="/shutter-pages/problem-with-the-service">Sorry, there is a problem with the
+            service</a>
+        <li><a class="govuk-link" href="/shutter-pages/page-not-found">Page not found</a>
+        <li><a class="govuk-link" href="/shutter-pages/service-is-unavilable">Sorry, the service is unavailable</a>
+        <li><a class="govuk-link" href="/shutter-pages/service-timeout">Service timeout</a>
+      </ul>
+    </div>
+
 
   </div>
 
