@@ -6,6 +6,28 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+const fs = require('fs');
+const path = require('path');
+
+
+router.use((req, res, next) => {
+  const lang = req.query.lang || 'en'; // default to English
+  const filePath = path.join(__dirname, 'data/locales', `${lang}.json`);
+//   console.log(filePath);
+
+  try {
+    res.locals.translations = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    console.log(res.locals.translations['local-authority'])
+  } catch (err) {
+    console.error('Translation file error:', err);
+    res.locals.translations = {};
+  }
+
+  res.locals.currentLang = lang;
+  next();
+});
+
+
 // Add your routes here
 
 // router.get('*', (req, res, next) => {

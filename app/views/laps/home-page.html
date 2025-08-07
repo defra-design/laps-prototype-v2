@@ -21,10 +21,10 @@
     <div class="govuk-grid-column-one-third">
       {{
         dwpLanguageToggle({
-          selectedLang: "en",
+          selectedLang: currentLang,
           href: {
-            en: "/patterns/toggle-to-welsh/examples/en",
-            cy: "/patterns/toggle-to-welsh/examples/cy"
+            en: "?lang=en",
+            cy: "?lang=cy"
           }
         })
       }}
@@ -55,7 +55,7 @@
   </div>
 </div>
     
-<span class="govuk-caption-xl">Local Authority Payments (LAPs) home</span>
+<span class="govuk-caption-xl">{{ translations['local-authority'] }}</span>
 <h1 class="govuk-heading-xl">Glamshire County Council</h1>
 
 <div class="govuk-grid-row">
