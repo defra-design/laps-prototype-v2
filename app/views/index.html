@@ -31,7 +31,7 @@
   items: [
     {
       heading: {
-        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+        html: ''
       },
       summary: {
         html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
@@ -60,7 +60,7 @@
         </div>
 
 <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start CEO LAPs Journey
+          Start CEO journey
         </button>
       </form>
  
@@ -79,7 +79,7 @@
   items: [
     {
       heading: {
-        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+        html: ''
       },
       summary: {
         html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
@@ -108,7 +108,7 @@
         </div>
 
 <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start HoF LAPs Journey
+          Start HoF journey
         </button>
       </form>
 
@@ -127,7 +127,7 @@
   items: [
     {
       heading: {
-        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+        html: ''
       },
       summary: {
         html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
@@ -160,7 +160,7 @@
         </div>
 
 <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start HoW LAPs Journey
+          Start HoW journey
         </button>
       </form>
 
@@ -179,7 +179,7 @@
   items: [
     {
       heading: {
-        html: '<h3 class="govuk-heading-s">Local Authority Payments (LAPs)</h3>'
+        html: ''
       },
       summary: {
         html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
@@ -212,7 +212,7 @@
         </div>
 
 <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start FO / WO LAPs Journey
+          Start FO / WO journey
         </button>
       </form>
 
@@ -220,31 +220,157 @@
 
      
 <!-- IDM TTP -->
-
  <h2 class="govuk-heading-m">Identity Management (IDM)</h2>
 
-    <p class="govuk-body govuk-!-margin-bottom-4"></p>
+<!-- SECTION ONE -->
 
-    <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m">IDM TTP</h2>
-      <p class="govuk-body"><strong class="govuk-tag govuk-tag--red">
+<div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">Nominated Owner (LAPs CEO)</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: ''
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
           To be signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Identity Management Trusted Third Party journey for the Nominated Owner. The Nominated Owner is accountable for the organisation, and can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>invite users</li>
+          <li>assign roles</li>
+          <li>manage access for others</li>
+          <li>update their name</li>
+          <li>use services they have been given access to</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/idm-ttp/manage-account">Manage Account</a></li>
+        <li><a class="govuk-link" href="/idm-ttp/complete-your-registration">Complete your registration</a></li>'
+      }
+    }
+  ]
+}) }}
 
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<form method="post" action="/">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+        </div>
 
-      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start Nominated Owner journey
+        </button>
+      </form>
 
-        <li>
-          <a class="govuk-link" href="/idm-ttp/manage-account">Manage Account</a>
-        </li>
-        <li>
-          <a class="govuk-link" href="/idm-ttp/complete-your-registration">Complete your registration</a>
-        </li>
-        
-      </ul>
+    </div>
+
+
+<!-- SECTION TWO -->
+
+<div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">Administrator (LAPs HoF & HoW)</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: ''
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
+          To be signed off
+        </strong> <strong class="govuk-tag govuk-tag--pink">
+          Updated July 2025
+        </strong></p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Identity Management Trusted Third Party journey for Administrators. The Administrator can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>invite users</li>
+          <li>assign roles</li>
+          <li>manage access for others</li>
+           <li>update their name</li>
+          <li>use services they have been given access to</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/idm-ttp/manage-account">Manage Account</a></li>
+        <li><a class="govuk-link" href="/idm-ttp/complete-your-registration">Complete your registration</a></li>'
+      }
+    }
+  ]
+}) }}
+
+<form method="post" action="/">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+        </div>
+
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start Administrator journey
+        </button>
+      </form>
+
+    </div>
+
+<!-- SECTION THREE -->
+
+<div class="custom-card-border-blue">
+      <h2 class="govuk-heading-m govuk-link-">Standard User (LAPs FO & WO)</h2>
+      
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        html: ''
+      },
+      summary: {
+        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--red">
+          To be signed off
+        </strong> <strong class="govuk-tag govuk-tag--pink">
+          Updated July 2025
+        </strong></p>
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <p class="govuk-body">Identity Management Trusted Third Party journey for Standard Users. The Standard User can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>update their name</li>
+          <li>use services they have been given access to</li>
+        </ul>'
+      },
+      content: {
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/idm-ttp/manage-account">Manage Account</a></li>
+        <li><a class="govuk-link" href="/idm-ttp/complete-your-registration">Complete your registration</a></li>'
+      }
+    }
+  ]
+}) }}
+
+<form method="post" action="/">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+        </div>
+
+<button class="govuk-button" data-module="govuk-button" type="submit">
+          Start Standard User journey
+        </button>
+      </form>
+
     </div>
 
 
