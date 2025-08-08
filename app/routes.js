@@ -17,7 +17,7 @@ router.use((req, res, next) => {
 
   try {
     res.locals.translations = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    console.log(res.locals.translations['local-authority'])
+    // console.log(res.locals.translations['local-authority'])
   } catch (err) {
     console.error('Translation file error:', err);
     res.locals.translations = {};
