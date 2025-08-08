@@ -4,3 +4,16 @@
 // 
 
 // Add extra styles here
+@media (min-width: 40.0625em) {
+    .govuk-service-navigation__wrapper {
+      display: flex;
+      justify-content: flex-end;
+  }
+}
+
+@media (max-width: 48.0525em) and (min-width: 40.0625em) {
+  .govuk-service-navigation__wrapper {
+      display: flex;
+      justify-content: flex-start;
+  }
+}
