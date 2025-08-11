@@ -132,6 +132,10 @@ router.post('/idm-ttp/account-management/check-answers', (req, res) => {
     res.redirect("/idm-ttp/account-management/team-member-added");
 })
 
+router.post('/idm-ttp/registration/whats-your-name', (req, res) => {
+    res.redirect("/idm-ttp/registration/check-answers");
+})
+
 
 
 
