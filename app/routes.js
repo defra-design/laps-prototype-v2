@@ -88,7 +88,7 @@ router.post('/laps/bank-details-confirmed', (req, res) => {
     };
 })
 
-router.post('/idm-ttp/registration/complete-your-registration', (req, res) => {
+router.post('/idm-ttp/registration/confirm-your-email', (req, res) => {
     res.redirect("/idm-ttp/registration/enter-the-verification-code");
 })
 
