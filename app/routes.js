@@ -88,24 +88,24 @@ router.post('/laps/bank-details-confirmed', (req, res) => {
     };
 })
 
-router.post('/idm-ttp/complete-your-registration', (req, res) => {
-    res.redirect("/idm-ttp/enter-the-verification-code");
+router.post('/idm-ttp/registration/complete-your-registration', (req, res) => {
+    res.redirect("/idm-ttp/registration/enter-the-verification-code");
 })
 
-router.post('/idm-ttp/enter-the-verification-code', (req, res) => {
-    res.redirect("/idm-ttp/choose-the-relevant-local-authority");
+router.post('/idm-ttp/registration/enter-the-verification-code', (req, res) => {
+    res.redirect("/idm-ttp/registration/choose-the-relevant-local-authority");
 })
 
-router.post('/idm-ttp/choose-the-relevant-local-authority', (req, res) => {
-    res.redirect("/idm-ttp/your-defra-account-terms-and-conditions");
+router.post('/idm-ttp/registration/choose-the-relevant-local-authority', (req, res) => {
+    res.redirect("/idm-ttp/registration/your-defra-account-terms-and-conditions");
 })
 
-router.post('/idm-ttp/your-defra-account-terms-and-conditions', (req, res) => {
-    res.redirect("/idm-ttp/confirm-details");
+router.post('/idm-ttp/registration/your-defra-account-terms-and-conditions', (req, res) => {
+    res.redirect("/idm-ttp/registration/confirm-details");
 })
 
-router.post('/idm-ttp/confirm-details', (req, res) => {
-    res.redirect("/idm-ttp/registration-confirmed");
+router.post('/idm-ttp/registration/confirm-details', (req, res) => {
+    res.redirect("/idm-ttp/registration/registration-confirmed");
 })
 
 router.post('/idm-ttp/choose-a-service', (req, res) => {
