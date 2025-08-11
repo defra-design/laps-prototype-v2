@@ -129,7 +129,7 @@ router.post('/idm-ttp/account-management/admin', (req, res) => {
 })
 
 router.post('/idm-ttp/account-management/check-answers', (req, res) => {
-    res.redirect("/idm-ttp/add-team-member/team-member-added");
+    res.redirect("/idm-ttp/account-management/team-member-added");
 })
 
 
