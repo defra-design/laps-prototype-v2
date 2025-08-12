@@ -47,7 +47,9 @@
         </ul>'
       },
       content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced"><li><a class="govuk-link" href="#">Something</a></li></ul>'
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
+        </ul>'
       }
     }
   ]
@@ -95,7 +97,9 @@
         </ul>'
       },
       content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced"><li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li></ul>'
+        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li>
+        </ul>'
       }
     }
   ]
@@ -270,16 +274,16 @@
         </button>
       </form>
 
-      <!-- <form method="post" action="/laps/home-page">
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
-        </div>
 
-      <a href='/laps/bank-details' class='govuk-link'>Bank details</a>
-      </form> -->
+  <!-- <form id="userForm" method="post" action="/laps/home-page">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <a href="#" onclick="document.getElementById('userForm').submit();">Start Nominated Owner journey</a>
+  </form> -->
 
-      
-
+ 
+     
       
     </div>
 
