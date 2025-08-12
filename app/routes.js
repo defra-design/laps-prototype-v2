@@ -70,6 +70,18 @@ router.get('/laps/confirm-bank-details', (req, res, next) => {
   next();
 });
 
+router.get('/index', (req, res, next) => {
+
+    // Store the referrer page to manage the page redirect
+    const referrer = req.get('Referrer') || 'unknown';
+    const parts = referrer.trim().split('/');
+    req.session.data['user-type'] = parts[parts.length - 1];
+    
+    // console.log('Referrer:', req.session.data['user-type']);
+  // Pass control to the next matching route
+  next();
+});
+
 router.post('/laps/confirm-bank-details', (req, res) => {
     res.redirect("/laps/bank-details-confirmed");
 })
@@ -101,7 +113,14 @@ router.post('/idm-ttp/registration/choose-the-relevant-local-authority', (req, r
 })
 
 router.post('/idm-ttp/registration/your-defra-account-terms-and-conditions', (req, res) => {
-    res.redirect("/idm-ttp/registration/confirm-details");
+    switch (req.session.data['user-type']) {
+        case 'ceo':
+            res.redirect("/idm-ttp/registration/confirm-details")
+            break;
+        default:
+            res.redirect("/idm-ttp/registration/whats-your-name")
+    };
+    // res.redirect("/idm-ttp/registration/confirm-details");
 })
 
 router.post('/idm-ttp/registration/confirm-details', (req, res) => {
