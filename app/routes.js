@@ -171,6 +171,14 @@ router.post('/idm-ttp/account-management/change-account-role/check-answers', (re
     res.redirect("/idm-ttp/account-management/change-account-role/manage-team-member-success");
 })
 
+router.post('/idm-ttp/account-management/change-service-role/service-role', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-service-role/check-answers");
+})
+
+router.post('/idm-ttp/account-management/change-service-role/check-answers', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-service-role/manage-team-member-success");
+})
+
 
 
 
