@@ -155,6 +155,13 @@ router.post('/idm-ttp/registration/whats-your-name', (req, res) => {
     res.redirect("/idm-ttp/registration/check-answers");
 })
 
+router.post('/idm-ttp/account-management/change-name/whats-your-name', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-name/check-answers");
+})
+
+router.post('/idm-ttp/account-management/change-name/check-answers', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-name/user-account-success");
+})
 
 
 

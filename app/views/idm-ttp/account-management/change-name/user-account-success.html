@@ -1,0 +1,97 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBackLink({
+            text: "Back",
+            href: "/idm-ttp/account-management/your-defra-account"
+          }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Name updated
+        </h3>
+        <p class="govuk-body">You have updated your name</p>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: "success"
+      }) }}
+
+
+      <h1 class="govuk-heading-xl">Update your details</h1>
+
+      <p class="govuk-body">Make updates to your Defra account personal information</p>
+    
+  {{ govukSummaryList({
+    rows: [
+      {
+        key: {
+          text: "Personal information"
+        },
+        value: {
+          text: data['firstName1'] + " " + data['lastName1']
+        },
+        actions: {
+        items: [
+          {
+            href: "/idm-ttp/account-management/change-name/whats-your-name",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+        }
+      }
+          ]
+  }) }}
+
+  <h3 class="govuk-heading-m">Need to update your email?</h3>
+    <p class="govuk-body">Defra account uses your Government Gateway credentials to log in, so you will need to go to your Government Gateway profile to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>update your email address</li>
+      </ul>
+      
+  <div class="govuk-inset-text">
+          You will be signed out of your Defra account if you 
+          <a href='#' class='govuk-link'>go to your Government Gateway profile (opens in new tab)</a>
+        </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
