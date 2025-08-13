@@ -155,6 +155,17 @@ router.post('/idm-ttp/registration/whats-your-name', (req, res) => {
     res.redirect("/idm-ttp/registration/check-answers");
 })
 
+router.post('/idm-ttp/registration/check-answers', (req, res) => {
+    switch (req.session.data['user-type']) {
+        case 'admin':
+            res.redirect("/idm-ttp/registration/registration-confirmed-admin")
+            break;
+        default:
+            res.redirect("/idm-ttp/registration/registration-confirmed-standard")
+    };    
+    // res.redirect("/idm-ttp/registration/registration-confirmed-admin");
+})
+
 router.post('/idm-ttp/account-management/change-name/whats-your-name', (req, res) => {
     res.redirect("/idm-ttp/account-management/change-name/check-answers");
 })
