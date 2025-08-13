@@ -1,57 +1,59 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/laps-shutter.html" %}
 
 {% block pageTitle %}
   Check your details – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Beta"
-    },
-    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
-  <nav class="hmrc-language-select" aria-label="Language switcher">
-    <ul class="hmrc-language-select__list">
-      <li class="hmrc-language-select__list-item">
-        <span aria-current="true">English</span>
-      </li>
-      <li class="hmrc-language-select__list-item">
-        <a href="?cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
-          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
-          <span aria-hidden="true">Cymraeg</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+    <h1 class="govuk-heading-l">Sorry, the service is currently unavailable</h1>
     <p class="govuk-body">
       You will be able to use the service soon.  </p>
   
-    <h3 class="govuk-heading-m">Contact us</h3>
+    <h2 class="govuk-heading-l">Contact us</h2>
 
-    <h3 class="govuk-heading-s">Talk to an advisor</h3>
-    <ul class="govuk-list">
-      <li>Telephone: 0300 060 0002</li>
-      <li>Monday to Friday 8:30am - 4:30pm (except public holidays)</li>
-    </ul>
- 
-   
-    <h3 class="govuk-heading-s">Email</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Email</h3>
     <ul class="govuk-list">
       <li><a href="mailto:#">EPRCustomerService@defra.gov.uk</a></li>
      
-      <li>We aim to respond within 3 working days.</li>  
+      <li>We aim to respond within 20 working days.</li>  
     </ul>
 
-  </div>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Telephone</h3>
+    <ul class="govuk-list">
+      <li>Telephone: 0300 060 0002</li>
+      <li>Monday to Friday 8m - 6pm (closed on weekends and bank holidays)</li>
+    </ul>
+ 
+   
+ 
+
   </div>
 </div>
-
 {% endblock %}
