@@ -128,27 +128,27 @@ router.post('/idm-ttp/registration/confirm-details', (req, res) => {
 })
 
 router.post('/idm-ttp/account-management/add-team-member/choose-a-service', (req, res) => {
-    res.redirect("/idm-ttp/account-management/what-we-need");
+    res.redirect("/idm-ttp/account-management/add-team-member/what-we-need");
 })
 
-router.post('/idm-ttp/account-management/what-we-need', (req, res) => {
-    res.redirect("/idm-ttp/account-management/whats-their-la-email");
+router.post('/idm-ttp/account-management/add-team-member/what-we-need', (req, res) => {
+    res.redirect("/idm-ttp/account-management/add-team-member/whats-their-la-email");
 })
 
-router.post('/idm-ttp/account-management/whats-their-la-email', (req, res) => {
-    res.redirect("/idm-ttp/account-management/service-role");
+router.post('/idm-ttp/account-management/add-team-member/whats-their-la-email', (req, res) => {
+    res.redirect("/idm-ttp/account-management/add-team-member/service-role");
 })
 
-router.post('/idm-ttp/account-management/service-role', (req, res) => {
-    res.redirect("/idm-ttp/account-management/admin");
+router.post('/idm-ttp/account-management/add-team-member/service-role', (req, res) => {
+    res.redirect("/idm-ttp/account-management/add-team-member/admin");
 })
 
-router.post('/idm-ttp/account-management/admin', (req, res) => {
-    res.redirect("/idm-ttp/account-management/check-answers");
+router.post('/idm-ttp/account-management/add-team-member/admin', (req, res) => {
+    res.redirect("/idm-ttp/account-management/add-team-member/check-answers");
 })
 
-router.post('/idm-ttp/account-management/check-answers', (req, res) => {
-    res.redirect("/idm-ttp/account-management/team-member-added");
+router.post('/idm-ttp/account-management/add-team-member/check-answers', (req, res) => {
+    res.redirect("/idm-ttp/account-management/add-team-member/team-member-added");
 })
 
 router.post('/idm-ttp/registration/whats-your-name', (req, res) => {
