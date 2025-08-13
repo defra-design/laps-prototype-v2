@@ -163,6 +163,13 @@ router.post('/idm-ttp/account-management/change-name/check-answers', (req, res) 
     res.redirect("/idm-ttp/account-management/change-name/user-account-success");
 })
 
+router.post('/idm-ttp/account-management/change-account-role/admin', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-account-role/check-answers");
+})
+
+router.post('/idm-ttp/account-management/change-account-role/check-answers', (req, res) => {
+    res.redirect("/idm-ttp/account-management/change-account-role/manage-team-member-success");
+})
 
 
 

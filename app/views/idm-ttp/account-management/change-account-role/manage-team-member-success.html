@@ -48,6 +48,26 @@
 {% endblock %}
 
 {% block content %}
+
+<div>{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      {% set html %}
+        <h3 class="govuk-notification-banner__heading">
+          Account role updated
+        </h3>
+        <p class="govuk-body">You have updated Joe Bloggs' account role</p>
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html,
+        type: "success"
+      }) }}
+  </div>
+    </div>
+    </div>
+
+
 <span class="govuk-caption-xl">Glamshire County Council</span>
 <h1 class="govuk-heading-xl">Joe Bloggs</h1>
 
@@ -98,7 +118,7 @@
           text: "Role"
         },
         value: {
-          text: 'Admin'
+          text: data['admin']
         }
       }
     ]

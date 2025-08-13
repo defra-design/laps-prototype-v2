@@ -11,9 +11,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukBackLink({
-            text: "Back",
-            href: "#"
-          }) }}
+      text: "Back",
+      href: "/idm-ttp/account-management/change-account-role/admin"
+    }) }}
     </div>
     <div class="govuk-grid-column-one-third">
       {{
@@ -35,26 +35,25 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-xl">Add team member</span>
+    <span class="govuk-caption-xl">Register Defra account</span>
     <h1 class="govuk-heading-xl">Check your answers</h1>
     
   {{ govukSummaryList({
     rows: [
       {
         key: {
-          text: "Email address"
+          text: "Name"
         },
         value: {
-          text: data['team-member-email']
+          text: "Joe Bloggs"
+        }
+      },
+      {
+        key: {
+          text: "Account"
         },
-        actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
+        value: {
+          text: "Glamshire County Council"
         }
       },
       {
@@ -67,41 +66,7 @@
         actions: {
         items: [
           {
-            href: "/idm-ttp/account-management/add-team-member/admin",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
-        }
-      },
-      {
-        key: {
-          text: "Service"
-        },
-        value: {
-          text: data['whichServiceDoYouWantThisPersonToUse']
-        },
-        actions: {
-        items: [
-          {
-            href: "#",
-            text: "Change",
-            visuallyHiddenText: "name"
-          }
-        ]
-        }
-      },
-      {
-        key: {
-          text: "Service role"
-        },
-        value: {
-          text: data['service-role']
-        },
-        actions: {
-        items: [
-          {
-            href: "#",
+            href: "/idm-ttp/account-management/change-account-role/admin",
             text: "Change",
             visuallyHiddenText: "name"
           }
@@ -114,7 +79,7 @@
 
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button" type="submit" value="continue">
-          Confirm and add
+          Confirm
         </button>
       </div>
     </form>
