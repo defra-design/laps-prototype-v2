@@ -127,7 +127,7 @@ router.post('/idm-ttp/registration/confirm-details', (req, res) => {
     res.redirect("/idm-ttp/registration/registration-confirmed");
 })
 
-router.post('/idm-ttp/account-management/choose-a-service', (req, res) => {
+router.post('/idm-ttp/account-management/add-team-member/choose-a-service', (req, res) => {
     res.redirect("/idm-ttp/account-management/what-we-need");
 })
 
