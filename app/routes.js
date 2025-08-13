@@ -179,6 +179,25 @@ router.post('/idm-ttp/account-management/change-service-role/check-answers', (re
     res.redirect("/idm-ttp/account-management/change-service-role/manage-team-member-success");
 })
 
+router.post('/idm-ttp/account-management/assign-service/manage-team-member', (req, res) => {
+    res.redirect("/idm-ttp/account-management/assign-service/choose-a-service");
+})
+
+router.post('/idm-ttp/account-management/assign-service/choose-a-service', (req, res) => {
+    res.redirect("/idm-ttp/account-management/assign-service/what-we-need");
+})
+
+router.post('/idm-ttp/account-management/assign-service/what-we-need', (req, res) => {
+    res.redirect("/idm-ttp/account-management/assign-service/service-role");
+})
+
+router.post('/idm-ttp/account-management/assign-service/service-role', (req, res) => {
+    res.redirect("/idm-ttp/account-management/assign-service/check-answers");
+})
+
+router.post('/idm-ttp/account-management/assign-service/check-answers', (req, res) => {
+    res.redirect("/idm-ttp/account-management/assign-service/manage-team-member-success");
+})
 
 
 

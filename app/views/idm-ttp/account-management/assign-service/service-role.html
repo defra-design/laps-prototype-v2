@@ -1,0 +1,105 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBackLink({
+      text: "Back",
+      href: "/idm-ttp/account-management/assign-service/what-we-need"
+    }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <span class="govuk-caption-xl">Give service access</span>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What role will they have on this service?
+              </h1>
+            </legend>
+
+            
+            <div class="govuk-inset-text">
+              Select all roles that apply. You can modify them later under 'Manage account'
+             </div>
+     
+
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="service-role-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="service-role" name="service-role" type="checkbox" value="Head of Finance" aria-describedby="service-role-item-hint">
+          <label class="govuk-label govuk-checkboxes__label" for="service-role">
+            Head of Finance
+          </label>
+          <div id="service-role-item-hint" class="govuk-hint govuk-checkboxes__hint">
+            This person must be employed by your local authority in a statutory or strategic financial role with responsibility for financial governance (e.g. Section 151 Officer, Chief Financial Officer). They must be authorised to verify the bank account details that your authority will use to receive EPR for packaging payments </div>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="service-role" name="service-role" type="checkbox" value="Head of Waste" aria-describedby="service-role-item-hint">
+          <label class="govuk-label govuk-checkboxes__label" for="service-role">
+            Head of Waste
+          </label>
+          <div id="service-role-item-hint" class="govuk-hint govuk-checkboxes__hint">
+            This person must be employed by your local authority in a strategic or operational leadership role related to waste management services (e.g. Head of Waste, Waste Manager) </div>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="service-role" name="service-role" type="checkbox" value="Finance Officer" aria-describedby="service-role-item-hint">
+          <label class="govuk-label govuk-checkboxes__label" for="service-role">
+            Finance Officer
+          </label>
+          <div id="service-role-item-hint" class="govuk-hint govuk-checkboxes__hint">
+            This person must be employed by your local authority in an operational finance role (e.g. Payments Officer, Finance Business Officer) </div>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="service-role" name="service-role" type="checkbox" value="Waste Officer" aria-describedby="service-role-item-hint">
+          <label class="govuk-label govuk-checkboxes__label" for="service-role">
+            Waste Officer
+          </label>
+          <div id="service-role-item-hint" class="govuk-hint govuk-checkboxes__hint">
+            This person must be employed by your local authority in an operational waste management role (e.g. Waste Management Officer, Waste Data Officer) </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit" value="continue">
+          Continue
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBackLink({
+      text: "Back",
+      href: "/idm-ttp/account-management/assign-service/choose-a-service"
+    }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <span class="govuk-caption-xl">Give service access</span>
+        <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What we need
+            </h1>
+          </legend>
+
+          <p class="govuk-body">Adding a team member will give them access to Local Authority Payments (LAPs). Their access may be different depending on their service role. This can be one or more of the following: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Head of Finance </li>
+            <li>Head of Waste </li>
+            <li>Finance Officer </li>
+            <li>Waste Officer </li>
+          </ul>
+
+          <p class="govuk-body">You will need to tell us: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>their local authority email address </li>
+            <li>What service role they Wil have on Local Authority Payments (LAPs)</li>
+            <li>if they will be an administrator for the organisation</li>
+          </ul>
+
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="confirmResponsibility" name="confirmResponsibility" type="checkbox" value="confirm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                I confirm that the people I will nominate can access Local Authority Payments (LAPs) on behalf of my local authority 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit" value="continue">
+          Continue
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
