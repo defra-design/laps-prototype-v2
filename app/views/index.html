@@ -49,12 +49,31 @@
       content: {
         html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
           <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
+          <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
+          <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
+          <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>
         </ul>'
       }
     }
   ]
 }) }}
 
+
+  <!-- <form id="userForm" method="post" action="/laps/home-page">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userForm').submit();">Home page</a></li>
+  </form>
+
+    <form id="userForm" method="post" action="/laps/bank-details">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="/laps/bank-details" onclick="document.getElementById('userForm').submit();">Bank details</a></li>
+  </form> -->
+
+  
   <form method="post" action="/">
     <div class="govuk-form-group">
       <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
@@ -64,6 +83,7 @@
       Start CEO journey
     </button>
   </form>
+
 
 </div>
 
@@ -98,6 +118,10 @@
       },
       content: {
         html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
+          <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
+          <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
+          <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>
           <li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li>
         </ul>'
       }
@@ -333,7 +357,7 @@
         </div>
 
 <button class="govuk-button" data-module="govuk-button" type="submit">
-          Start Nominated Owner journey
+          Start Administrator journey
         </button>
       </form>  
 
@@ -367,24 +391,52 @@
         </ul>'
       },
       content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/idm-ttp/account-management/la-account">Manage Account</a></li>
-        <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Complete your registration</a></li>'
+        html: '<h3 class="govuk-heading-s">Registration</h3>
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/idm-ttp/emails/standard-registration-email">Registration email</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/whats-your-name">Whats your name?</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/check-answers">Check your answers</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-standard">Registration complete</a></li>
+          </ul>
+          <h3 class="govuk-heading-s govuk-!-margin-top-6">Account management</h3>
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li>
+          </ul>'
       }
     }
   ]
 }) }}
 
-<form method="post" action="/idm-ttp/registration/confirm-your-email">
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
-        </div>
+  
+    <form method="post" action="/idm-ttp/registration/confirm-your-email">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+            </div>
 
-<button class="govuk-button" data-module="govuk-button" type="submit">
-          Start Nominated Owner journey
-        </button>
-      </form>  
+    <button class="govuk-button" data-module="govuk-button" type="submit">
+              Start Registration journey
+            </button>
+          </form>  
 
+    <form method="post" action="/idm-ttp/account-management/your-defra-account-standard">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+            </div>
+
+    <button class="govuk-button" data-module="govuk-button" type="submit">
+              Start Account management journey
+            </button>
+          </form> 
+
+    
     </div>
 
 

@@ -109,10 +109,10 @@ router.post('/idm-ttp/registration/enter-the-verification-code', (req, res) => {
 })
 
 router.post('/idm-ttp/registration/choose-the-relevant-local-authority', (req, res) => {
-    res.redirect("/idm-ttp/registration/your-defra-account-terms-and-conditions");
+    res.redirect("/idm-ttp/registration/terms-and-conditions");
 })
 
-router.post('/idm-ttp/registration/your-defra-account-terms-and-conditions', (req, res) => {
+router.post('/idm-ttp/registration/terms-and-conditions', (req, res) => {
     switch (req.session.data['user-type']) {
         case 'ceo':
             res.redirect("/idm-ttp/registration/confirm-details")
