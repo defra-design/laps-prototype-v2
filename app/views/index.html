@@ -64,13 +64,6 @@
             <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
           </div>
          <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userForm').submit();">Home page</a></li>
-  </form>
-
-    <form id="userForm" method="post" action="/laps/bank-details">
-          <div class="govuk-form-group">
-            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
-          </div>
-         <li><a class="govuk-link govuk-body" href="/laps/bank-details" onclick="document.getElementById('userForm').submit();">Bank details</a></li>
   </form> -->
 
   
@@ -292,13 +285,15 @@
           <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed">Registration confirmed</a></li>
           </ul>
 
+          <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
           <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
           <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-          <h3 class="govuk-heading-s">Add team members</h3>
+          <h3 class="govuk-heading-s">Add team member</h3>
           <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/la-account">Local authority account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/manage-team-access">Manage team access</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/choose-a-service">Choose a service</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/what-we-need">What we need</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/whats-their-la-email">Whats their local authority email address?</a></li>
@@ -306,7 +301,8 @@
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/admin">Will they be an administrator for the organisation?</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/check-answers">Check your answers</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/team-member-added">Team member added</a></li>
-          </ul>'
+          </ul> -->
+          '
       }
     }
   ]
@@ -379,13 +375,15 @@
           <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-admin">Registration complete</a></li>
           </ul>
 
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
           <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
           <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-          <h3 class="govuk-heading-s">Add team members</h3>
+          <h3 class="govuk-heading-s">Add team member</h3>
           <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/la-account">Local authority account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/manage-team-access">Manage team access</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/choose-a-service">Choose a service</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/what-we-need">What we need</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/whats-their-la-email">Whats their local authority email address?</a></li>
@@ -400,6 +398,28 @@
           <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li>
+
+          <h3 class="govuk-heading-s govuk-!-margin-top-6">Change account role</h3>
+           <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/admin">Are they an administrator for the organisation?</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/check-answers">Check your answers</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/manage-team-member-success">Manage team member success</a></li>
+
+          <h3 class="govuk-heading-s govuk-!-margin-top-6">Change service role</h3>
+           <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/service-role">What role will they have on the service?</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/check-answers">Check your answers</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/manage-team-member-success">Manage team member success</a></li>
+
+          <h3 class="govuk-heading-s govuk-!-margin-top-6">Assign service</h3>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member">Manage team member</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/choose-a-service">Which service do you want this person to use?</a></li>
+           <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/what-we-need">What we need</a></li>
+            <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/service-role">What role will they have on this service?</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/check-answers">Check your answers</a></li>
+          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member-success">Manage team member success</a></li>
           </ul>'
       }
     }
@@ -459,9 +479,11 @@
           <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-standard">Registration complete</a></li>
           </ul>
 
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+          
           <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
           <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-            
+
           <h3 class="govuk-heading-s">Change name</h3>
           <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
           <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
