@@ -22,49 +22,51 @@
 
 <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">CEO</h2>
-      
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
           Signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Local Authority Payments (LAPs) journey for CEO. The CEO can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>view and download payment documents</li>
-          <li>view bank details</li>
-          <li>view guidance and raise support requests</li>
-        </ul>'
-      },
-      content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
-          <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
-          <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
-          <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>
-        </ul>'
-      }
-    }
-  ]
-}) }}
 
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-  <!-- <form id="userForm" method="post" action="/laps/home-page">
+   <p class="govuk-body">Local Authority Payments (LAPs) journey for CEO. The CEO can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>view and download payment documents</li>
+        <li>view bank details</li>
+        <li>view guidance and raise support requests</li>
+      </ul>
+
+  <form id="userFormHP" method="post" action="/laps/home-page">
           <div class="govuk-form-group">
             <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
           </div>
-         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userForm').submit();">Home page</a></li>
-  </form> -->
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP').submit();">Home page</a></li>
+  </form>
+ 
+  <form id="userFormBD" method="post" action="/laps/bank-details">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD').submit();">Bank details</a></li>
+  </form>
+
+  <form id="userFormPD" method="post" action="/laps/payment-documents">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD').submit();">Payment documents</a></li>
+  </form>
+
+  <form id="userFormGH" method="post" action="/laps/get-help">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH').submit();">Get help</a></li>
+  </form>
 
   
   <form method="post" action="/">
@@ -86,41 +88,50 @@
 <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Head of Finance</h2>
       
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
           Signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Finance. The Head of Finance can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>view and download payment documents</li>
-          <li>view and confirm bank details</li>
-          <li>view guidance and raise support requests</li>
-        </ul>'
-      },
-      content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
-          <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
-          <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
-          <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>
-          <li><a class="govuk-link" href="/laps/confirm-bank-details?error=true">Bank details (Showing form errors)</a></li>
-        </ul>'
-      }
-    }
-  ]
-}) }}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+   <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Finance. The Head of Finance can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>view and download payment documents</li>
+        <li>view and confirm bank details</li>
+        <li>view guidance and raise support requests</li>
+      </ul>
+
+  <form id="userFormHP2" method="post" action="/laps/home-page">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="head-of-finance" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP2').submit();">Home page</a></li>
+  </form>
+ 
+  <form id="userFormBD2" method="post" action="/laps/bank-details">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="head-of-finance" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD2').submit();">Bank details</a></li>
+  </form>
+
+  <form id="userFormPD2" method="post" action="/laps/payment-documents">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="head-of-finance" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD2').submit();">Payment documents</a></li>
+  </form>
+
+  <form id="userFormGH2" method="post" action="/laps/get-help">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="head-of-finance" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH2').submit();">Get help</a></li>
+  </form>
 
 <form method="post" action="/">
         <div class="govuk-form-group">
@@ -140,39 +151,51 @@
 <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Head of Waste</h2>
       
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
           Signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Waste. The Head of Waste can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>view and download payment documents</li>
-          <li>view masked bank details</li>
-          <li>view guidance and raise support requests</li>
-        </ul>'
-      },
-      content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
-        <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
-        <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
-        <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>'
-      }
-    }
-  ]
-}) }}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+   <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Waste. The Head of Waste can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>view and download payment documents</li>
+        <li>view masked bank details</li>
+        <li>view guidance and raise support requests</li>
+      </ul>
+
+  <form id="userFormHP3" method="post" action="/laps/home-page">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP3').submit();">Home page</a></li>
+  </form>
+ 
+  <form id="userFormBD3" method="post" action="/laps/bank-details">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD3').submit();">Bank details</a></li>
+  </form>
+
+  <form id="userFormPD3" method="post" action="/laps/payment-documents">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD3').submit();">Payment documents</a></li>
+  </form>
+
+  <form id="userFormGH3" method="post" action="/laps/get-help">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH3').submit();">Get help</a></li>
+  </form>
+
 
 <form method="post" action="/">
         <div class="govuk-form-group">
@@ -192,39 +215,51 @@
 <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Finance and Waste Officers</h2>
       
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
           Signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Local Authority Payments (LAPs) journey for Finance and Waste Officers. The Finance and Waste Officers can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>view and download payment documents</li>
-          <li>view masked bank details</li>
-          <li>view guidance and raise support requests</li>
-        </ul>'
-      },
-      content: {
-        html: '<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/laps/home-page">Home page</a></li>
-        <li><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></li>
-        <li><a class="govuk-link" href="/laps/bank-details">Bank details</a></li>
-        <li><a class="govuk-link" href="/laps/get-help">Get help</a></li>'
-      }
-    }
-  ]
-}) }}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+   <p class="govuk-body">Local Authority Payments (LAPs) journey for Finance and Waste Officers. The Finance and Waste Officers can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>view and download payment documents</li>
+        <li>view masked bank details</li>
+        <li>view guidance and raise support requests</li>
+      </ul>
+
+  <form id="userFormHP3" method="post" action="/laps/home-page">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP3').submit();">Home page</a></li>
+  </form>
+ 
+  <form id="userFormBD3" method="post" action="/laps/bank-details">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD3').submit();">Bank details</a></li>
+  </form>
+
+  <form id="userFormPD3" method="post" action="/laps/payment-documents">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD3').submit();">Payment documents</a></li>
+  </form>
+
+  <form id="userFormGH3" method="post" action="/laps/get-help">
+          <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+          </div>
+         <li><a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH3').submit();">Get help</a></li>
+  </form>
+
 
 <form method="post" action="/">
         <div class="govuk-form-group">
