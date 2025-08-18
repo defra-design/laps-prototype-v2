@@ -100,16 +100,20 @@ router.post('/laps/bank-details-confirmed', (req, res) => {
     };
 })
 
-router.post('/idm-ttp/registration/confirm-your-email', (req, res) => {
-    res.redirect("/idm-ttp/registration/enter-the-verification-code");
+router.post('/idm-ttp/registration/start', (req, res) => {
+    res.redirect('/idm-ttp/registration/confirm-your-email')
 })
 
-router.post('/idm-ttp/registration/enter-the-verification-code', (req, res) => {
-    res.redirect("/idm-ttp/registration/choose-the-relevant-local-authority");
+router.get('/idm-ttp/registration/confirm-your-email', (req, res) => {
+    res.render('/idm-ttp/registration/confirm-your-email')
 })
 
-router.post('/idm-ttp/registration/choose-the-relevant-local-authority', (req, res) => {
-    res.redirect("/idm-ttp/registration/terms-and-conditions");
+router.get('/idm-ttp/registration/enter-the-verification-code', (req, res) => {
+    res.render("/idm-ttp/registration/enter-the-verification-code");
+})
+
+router.get('/idm-ttp/registration/choose-the-relevant-local-authority', (req, res) => {
+    res.render("/idm-ttp/registration/choose-the-relevant-local-authority");
 })
 
 router.post('/idm-ttp/registration/terms-and-conditions', (req, res) => {
