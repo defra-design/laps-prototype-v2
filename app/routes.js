@@ -116,19 +116,25 @@ router.get('/idm-ttp/registration/choose-the-relevant-local-authority', (req, re
     res.render("/idm-ttp/registration/choose-the-relevant-local-authority");
 })
 
-router.post('/idm-ttp/registration/terms-and-conditions', (req, res) => {
-    switch (req.session.data['user-type']) {
-        case 'ceo':
-            res.redirect("/idm-ttp/registration/confirm-details")
-            break;
-        default:
-            res.redirect("/idm-ttp/registration/whats-your-name")
-    };
-    // res.redirect("/idm-ttp/registration/confirm-details");
+router.get('/idm-ttp/registration/terms-and-conditions', (req, res) => {
+    res.render("/idm-ttp/registration/terms-and-conditions");
 })
 
-router.post('/idm-ttp/registration/confirm-details', (req, res) => {
-    res.redirect("/idm-ttp/registration/registration-confirmed");
+router.post('/idm-ttp/registration/terms-accepted', (req, res) => {
+    const userType = req.session.data['user-type'];
+  
+    const redirectMap = {
+      ceo: '/idm-ttp/registration/confirm-details',
+      admin: '/idm-ttp/registration/whats-your-name'
+    };
+  
+    const redirectUrl = redirectMap[userType] || '/idm-ttp/registration/whats-your-name';
+  
+    res.redirect(redirectUrl);
+});
+
+router.get('/idm-ttp/registration/confirm-details', (req, res) => {
+    res.render("/idm-ttp/registration/confirm-details");
 })
 
 router.post('/idm-ttp/account-management/add-team-member/choose-a-service', (req, res) => {
@@ -155,27 +161,33 @@ router.post('/idm-ttp/account-management/add-team-member/check-answers', (req, r
     res.redirect("/idm-ttp/account-management/add-team-member/team-member-added");
 })
 
-router.post('/idm-ttp/registration/whats-your-name', (req, res) => {
-    res.redirect("/idm-ttp/registration/check-answers");
+router.get('/idm-ttp/registration/whats-your-name', (req, res) => {
+    res.render("/idm-ttp/registration/whats-your-name");
 })
 
-router.post('/idm-ttp/registration/check-answers', (req, res) => {
-    switch (req.session.data['user-type']) {
-        case 'admin':
-            res.redirect("/idm-ttp/registration/registration-confirmed-admin")
-            break;
-        default:
-            res.redirect("/idm-ttp/registration/registration-confirmed-standard")
-    };    
-    // res.redirect("/idm-ttp/registration/registration-confirmed-admin");
+router.get('/idm-ttp/registration/check-answers', (req, res) => {
+    res.render("/idm-ttp/registration/check-answers");
 })
 
-router.post('/idm-ttp/account-management/change-name/whats-your-name', (req, res) => {
-    res.redirect("/idm-ttp/account-management/change-name/check-answers");
+router.post('/idm-ttp/registration/answers-verified', (req, res) => {
+    const userType = req.session.data['user-type'];
+  
+    const redirectMap = {
+      admin: '/idm-ttp/registration/registration-confirmed-admin',
+      default: '/idm-ttp/registration/registration-confirmed-standard'
+    };
+  
+    const redirectUrl = redirectMap[userType] || '/idm-ttp/registration/registration-confirmed-standard';
+  
+    res.redirect(redirectUrl);
+});
+
+router.get('/idm-ttp/account-management/change-name/whats-your-name', (req, res) => {
+    res.render("/idm-ttp/account-management/change-name/whats-your-name");
 })
 
-router.post('/idm-ttp/account-management/change-name/check-answers', (req, res) => {
-    res.redirect("/idm-ttp/account-management/change-name/user-account-success");
+router.get('/idm-ttp/account-management/change-name/check-answers', (req, res) => {
+    res.render("/idm-ttp/account-management/change-name/check-answerss");
 })
 
 router.post('/idm-ttp/account-management/change-account-role/admin', (req, res) => {
