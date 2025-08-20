@@ -16,4 +16,13 @@
       display: flex;
       justify-content: flex-start;
   }
+  .custom-flex-wrapper {
+      display: block !important;
+  }
+}
+
+@media (max-width: 40.0625em) {
+  .custom-flex-wrapper {
+    display: block !important;
+  }
 }
