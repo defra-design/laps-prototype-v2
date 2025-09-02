@@ -226,5 +226,8 @@ router.post('/idm-ttp/account-management/assign-service/check-answers', (req, re
     res.redirect("/idm-ttp/account-management/assign-service/manage-team-member-success");
 })
 
+router.post('/idm-ttp/registration/incorrect-details', (req, res) => {
+    res.redirect("/idm-ttp/registration/confirm-your-email");
+})
 
 

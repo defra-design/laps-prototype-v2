@@ -1,0 +1,73 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="#" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            You cannot continue with registration
+          </label>
+        </h1>
+
+        <div><p class="govuk-body">These are the details currently associated with the email address you are using.</p>
+        <p class="govuk-body">If you need to make any changes, please contact customer services below. </p>
+        </div>
+
+        <div class="govuk-inset-text">
+          <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
+            <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
+            We aim to respond within 20 working days
+            </p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
+            0300 060 0002<br>
+            Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>
+            
+             
+    </form>
+        </div>
+
+        <div><p class="govuk-body">Alternatively, you can restart your registration process by clicking the button below.</p>
+        </div>
+
+     <form method="post" action="/idm-ttp/registration/start">
+        <div class="govuk-form-group">
+          <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
+        </div>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="submit">
+          Restart registration process
+        </button>
+      </form>  
+</div>
+
+{% endblock %}
