@@ -1,0 +1,96 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "language-toggle/macro.njk" import dwpLanguageToggle %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+
+{% block header %}
+  {{ govukHeader({}) }}
+{% endblock %}
+
+
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    .custom-phase-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 15px;
+    }
+
+    .custom-nav-links a {
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    .custom-nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .govuk-grid-row {
+      display: flex;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+    .custom-container-card {
+      display: flex;
+    }
+
+    .custom-card {
+      flex: 1;
+      margin-bottom: 2em;
+      padding: 1em;
+      background-color: #f3f2f1;
+      border-bottom: #1d70b8 4px solid;
+    }
+
+    .custom-card-border-blue {
+      margin-bottom: 2em;
+      padding: 1em;
+      border: #1d70b8 1px solid;
+    }
+    
+    .govuk-service-navigation {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+  </style>
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukServiceNavigation({
+  serviceName: "Local Authority Payments account for EPR",
+  serviceUrl: "#",
+  navigationClasses: "nav-links-align-right",
+  navigation: [
+    {
+      href: "/idm-ttp/account-management/your-defra-account-ceo",
+      text: "Your Defra Account",
+      active: false
+    },
+    {
+      href: "#",
+      text: "Sign out"
+    }
+  ]
+}) }}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Beta"
+    },
+    html: 'This is a new service - your <a class="govuk-link" href="#">feedback</a> will help improve it.'
+  }) }}
+
+
+
+{% endblock %}

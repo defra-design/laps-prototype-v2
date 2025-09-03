@@ -1,0 +1,65 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="/laps/head-of-finance/home-page" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        
+        {{ govukRadios({
+          name: "chooseTheRelevantLocalAuthority",
+          fieldset: {
+            legend: {
+              text: "Choose the relevant local authority",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "glamshireCountyCouncil",
+              text: "Glamshire County Council"
+            },
+            {
+              value: "unglamshireCountyCouncil",
+              text: "Unglamshire County Council"
+            }
+          ]
+        }) }}
+      </div>
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
