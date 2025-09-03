@@ -1,0 +1,179 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block pageTitle %}
+  Bank details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    /* Layout for confirmed/unconfirmed tag */
+    /* To do - this breaks on mobile width */
+    .custom-flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Aligns children to the top */
+      padding: 1rem 0;
+      
+    }
+
+    .left-box,
+    .right-box {
+      flex: 0 0 auto;
+    }
+  </style>
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "LAPs home",
+            href: "/laps/head-of-finance/home-page"
+          },
+          {
+            text: "Bank details"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      {% if (data['confirm-bank-details'] != 'confirmed') %}
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        Please confirm your local authority's bank details.
+        <a class="govuk-notification-banner__link" href="/laps/head-of-finance/confirm-bank-details">Confirm bank details</a>
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+  
+  {% endif %}
+  
+
+
+  
+  <span class="govuk-caption-xl">Glamshire County Council</span>
+  <h1 class="govuk-heading-xl">Bank details</h1>
+
+  <div class="custom-flex-wrapper">
+    <div class="left-box">
+      <h2 class="govuk-heading-m">Your local authority's bank details</h2>
+    </div>
+    <div class="right-box">
+      {% if data['confirm-bank-details'] == 'confirmed' %}
+        <strong class="govuk-tag govuk-tag--green">
+          CONFIRMED
+        </strong>
+      {% else %}
+        <strong class="govuk-tag govuk-tag--red">
+          UNCONFIRMED
+        </strong>
+      {% endif %}
+    </div>
+  </div>
+  {% if (data['user-type'] == 'head-of-finance') or (data['user-type'] == 'ceo') %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "12 34 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "78910112"
+          }
+        }
+      ]
+    }) }}
+    {% else %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "ending with 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "ending with 112"
+          }
+        }
+      ]
+    }) }}
+  {% endif %}
+
+  {{ govukDetails({
+    summaryText: "These details are incorrect",
+    html: "<p class='govuk-body'>To update your local authority's bank details, contact customer services.</p>
+            <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
+            <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
+            We aim to respond within 20 working days
+            </p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Telephone</span><br>
+            0300 060 0002<br>
+            Monday to Friday 8am to 6pm (closed on weekends and bank holidays)</p>"
+  }) }}
+  </div>
+</div>
+
+{% endblock %}

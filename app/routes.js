@@ -70,6 +70,18 @@ router.get('/laps/confirm-bank-details', (req, res, next) => {
   next();
 });
 
+router.get('/laps/head-of-finance/confirm-bank-details', (req, res, next) => {
+
+    // Store the referrer page to manage the page redirect
+    const referrer = req.get('Referrer') || 'unknown';
+    const parts = referrer.trim().split('/');
+    req.session.data['confirm-bank-details-referrer'] = parts[parts.length - 1];
+    
+    // console.log('Referrer:', req.session.data['confirm-bank-details-referrer']);
+  // Pass control to the next matching route
+  next();
+});
+
 router.get('/index', (req, res, next) => {
 
     // Store the referrer page to manage the page redirect
@@ -86,6 +98,10 @@ router.post('/laps/confirm-bank-details', (req, res) => {
     res.redirect("/laps/bank-details-confirmed");
 })
 
+router.post('/laps/head-of-finance/confirm-bank-details', (req, res) => {
+    res.redirect("/laps/head-of-finance/bank-details-confirmed");
+})
+
 router.post('/laps/bank-details-confirmed', (req, res) => {
 
     switch (req.session.data['confirm-bank-details-referrer']) {
@@ -97,6 +113,20 @@ router.post('/laps/bank-details-confirmed', (req, res) => {
             break;
         default:
             res.redirect("/laps/home-page")
+    };
+})
+
+router.post('/laps/head-of-finance/bank-details-confirmed', (req, res) => {
+
+    switch (req.session.data['confirm-bank-details-referrer']) {
+        case 'home-page':
+            res.redirect("/laps/head-of-finance/home-page")
+            break;
+        case 'bank-details':
+            res.redirect("/laps/head-of-finance/bank-details")
+            break;
+        default:
+            res.redirect("/laps/head-of-finance/home-page")
     };
 })
 
