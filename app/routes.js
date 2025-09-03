@@ -217,7 +217,7 @@ router.get('/idm-ttp/account-management/change-name/whats-your-name', (req, res)
 })
 
 router.get('/idm-ttp/account-management/change-name/check-answers', (req, res) => {
-    res.render("/idm-ttp/account-management/change-name/check-answerss");
+    res.render("/idm-ttp/account-management/change-name/check-answers");
 })
 
 router.post('/idm-ttp/account-management/change-account-role/admin', (req, res) => {

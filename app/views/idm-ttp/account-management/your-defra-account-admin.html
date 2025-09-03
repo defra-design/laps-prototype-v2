@@ -136,18 +136,22 @@
       </div>
     </div>
 
-  <!-- <form method="post" action="/idm-ttp/registration/choose-the-relevant-local-authority">
-    <div class="govuk-form-group">
-      <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" required hidden>
-    </div>
-    <div class="govuk-grid-row">
+
+  <!-- <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third custom-container-card">
-    <div class="custom-card">
-    <button class="govuk-link govuk-heading-m govuk-!-text-align-left" data-module="govuk-link" type="submit">
-      Local Authority Payments (LAPs)
-    </button>
-    </div>
-  </form> -->
+      <div class="custom-card">
+        <form id="userFormGH2" method="post" action="/idm-ttp/registration/choose-the-relevant-local-authority" style="display:inline;">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" hidden>
+            </div>
+            <a class="govuk-link govuk-heading-m"
+               href="#"
+               onclick="event.preventDefault(); document.getElementById('userFormGH2').submit();">
+              Local Authority Payments (LAPs)
+            </a>
+          </form>
+      </div>
+    </div> -->
 
   </div>
 
