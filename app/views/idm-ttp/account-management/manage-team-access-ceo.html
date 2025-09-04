@@ -1,0 +1,123 @@
+{% extends "layouts/idm-main-ceo.html" %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Defra home",
+            href: "/idm-ttp/account-management/your-defra-account-ceo"
+          },
+          {
+            text: "Glamshire County Council",
+            href: "/idm-ttp/account-management/la-account-ceo"
+          },
+          {
+            text: "Manage team access"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Manage team access</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post" action="">
+    
+        {{ govukButton({
+          text: "Add team member",
+          href: "/idm-ttp/account-management/add-team-member/choose-a-service"
+        }) }}
+        
+      </form>
+      <!-- <p class="govuk-heading-m"><a href='idm-ttp/account-management/add-team-member/choose-a-service.html'govuk-link'>Add a team member</a></p> -->
+      <p class="govuk-heading-m">All members (1)</p>
+      <p class="govuk-body">To view more information about a team member, including their service roles, or to add them to a service, go to 'Manage' next to their status</p>
+    </div>
+  </div>
+
+  
+  {{ govukTable({
+    caption: "Team member details",
+    captionClasses: "govuk-visually-hidden",
+    firstCellIsHeader: false,
+    head: [
+      {
+        text: "Name"
+      },
+      {
+        text: "Email address"
+      },
+      {
+        text: "Account role"
+      },
+      {
+        text: "Status"
+      },
+      {
+        html: "<span class='govuk-visually-hidden'>Manage</span>"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Joe Bloggs"
+        },
+        {
+          text: "joe.bloggs@glamshirecountycouncil.gov.uk"
+        },
+        {
+          text: "Nominated owner"
+        },
+        {
+          html: "<strong class='govuk-tag govuk-tag--blue'>Live</strong>"
+        },
+        {
+          html: "<a href='/idm-ttp/account-management/manage-team-member-ceo' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ]
+    ]
+  }) }}
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukDetails({
+    summaryText: "What are account roles?",
+    html: "<p class='govuk-body'>Account roles control what you can do within your Defra account. They let you manage access and permissions for your organisation.</p>
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Nominated Owner</span> - accountable for the organisation and can invite users, assign roles, manage access for others and use services they have access to</p>
+           <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Administrator</span> - can invite users, assign roles, manage access for others and use services they have access to</p>
+           <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Standard User</span> - can sign in and use services they've been given access to</p>"
+  }) }}
+  <div>
+  </div>
+
+{% endblock %}

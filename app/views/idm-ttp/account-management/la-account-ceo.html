@@ -1,0 +1,70 @@
+{% extends "layouts/idm-main-ceo.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Defra home",
+            href: "/idm-ttp/account-management/your-defra-account-ceo"
+          },{
+            text: "Glamshire County Council"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Manage account</span>
+<h1 class="govuk-heading-xl">Glamshire County Council</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access-ceo">Manage team access</a></h2>
+      <p class="govuk-heading-xl">1</p>
+      <p class="govuk-body"><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/choose-a-service.html">Add a team member</a></p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/idm-ttp/account-management/organisation-details/organisation-details.html">Manage your organisation</a></h2>
+      <p class="govuk-heading-xl">1</p>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="govuk-heading-l">Your registered services</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/idm-ttp/account-management/choose-the-relevant-local-authority-ceo">Local Authority Payments (LAPs)</a></h2>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
