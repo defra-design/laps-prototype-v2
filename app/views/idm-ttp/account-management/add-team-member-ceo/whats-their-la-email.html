@@ -1,0 +1,95 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBackLink({
+      text: "Back",
+      href: "/idm-ttp/account-management/add-team-member-ceo/what-we-need"
+    }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <span class="govuk-caption-xl">Add a team member</span>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What's their local authority email address?
+              </h1>
+            </legend>
+
+            <div class="govuk-inset-text">
+              This must be their individual work email address at Glamshire County Council
+            </div>
+
+            {{ govukInput({
+              label: {
+                text: "What's their local authority email address?",
+                classes: "govuk-visually-hidden"
+              },
+              classes: "govuk-input--width-20",
+              id: "team-member-email",
+              name: "team-member-email"
+            }) }}
+          </fieldset>
+        </div>
+      </div>
+      <!-- <span class="govuk-caption-xl">Add a team member</span> -->
+      <!-- {{ govukInput({
+        label: {
+          text: "What is the name of the event?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        formGroup: {
+          beforeInput: {
+            html: '<div class="govuk-grid-row">
+                    <div class="govuk-inset-text govuk-grid-column-full">
+                    This must be their individual work email address at Glamshire County Council
+                    </div>  
+                  </div>'
+          }
+        },
+        classes: "govuk-input--width-20",
+        id: "event-name",
+        name: "eventName"
+      }) }} -->
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit" value="continue">
+          Continue
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
