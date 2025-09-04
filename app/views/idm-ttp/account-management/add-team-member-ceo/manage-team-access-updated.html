@@ -1,4 +1,4 @@
-{% extends "layouts/idm-main.html" %}
+{% extends "layouts/idm-main-ceo.html" %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -16,11 +16,11 @@
         items: [
           {
             text: "Defra home",
-            href: "/idm-ttp/account-management/your-defra-account-admin"
+            href: "/idm-ttp/account-management/your-defra-account-ceo"
           },
           {
             text: "Glamshire County Council",
-            href: "/idm-ttp/account-management/la-account"
+            href: "/idm-ttp/account-management/la-account-ceo"
           },
           {
             text: "Manage team access"
@@ -54,7 +54,7 @@
     
         {{ govukButton({
           text: "Add team member",
-          href: "/idm-ttp/account-management/add-team-member/choose-a-service"
+          href: "/idm-ttp/account-management/add-team-member-ceo/choose-a-service"
         }) }}
         
       </form>
@@ -95,13 +95,31 @@
           text: "joe.bloggs@glamshirecountycouncil.gov.uk"
         },
         {
-          text: "Administrator"
+          text: "Nominated owner"
         },
         {
           html: "<strong class='govuk-tag govuk-tag--blue'>LIVE</strong>"
         },
         {
-          html: "<a href='/idm-ttp/account-management/manage-team-member' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
+          html: "<a href='/idm-ttp/account-management/manage-team-member-ceo' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Joe Bloggs</span></a>",
+          classes: "govuk-table__cell--numeric"
+        }
+      ],
+      [
+        {
+          text: "Name to be confirmed"
+        },
+        {
+          text: "jane.doe@glamshirecountycouncil.gov.uk"
+        },
+        {
+          text: "Administrator"
+        },
+        {
+          html: "<strong class='govuk-tag govuk-tag--grey'>INVITED</strong>"
+        },
+        {
+          html: "<a href='#' class='govuk-link'>Manage <span class='govuk-visually-hidden'>account for Jane Doe</span></a>",
           classes: "govuk-table__cell--numeric"
         }
       ]
@@ -113,7 +131,7 @@
     {{ govukDetails({
     summaryText: "What are account roles?",
     html: "<p class='govuk-body'>Account roles control what you can do within your Defra account. They let you manage access and permissions for your organisation.</p>
-            <!-- <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Nominated Owner</span> - accountable for the organisation and can invite users, assign roles, manage access for others and use services they have access to</p> -->
+            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Nominated Owner</span> - accountable for the organisation and can invite users, assign roles, manage access for others and use services they have access to</p>
            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Administrator</span> - can invite users, assign roles, manage access for others and use services they have access to</p>
            <p class='govuk-body'><span class='govuk-!-font-weight-bold'>• Standard User</span> - can sign in and use services they've been given access to</p>"
   }) }}
