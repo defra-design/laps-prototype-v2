@@ -1,4 +1,4 @@
-{% extends "layouts/laps-ceo.html" %}
+{% extends "layouts/laps-head-of-finance.html" %}
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
@@ -36,7 +36,7 @@
         items: [
           {
             text: "LAPs home",
-            href: "/laps/ceo/home-page"
+            href: "/laps/head-of-finance/home-page"
           },
           {
             text: "Bank details"
@@ -65,10 +65,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-  
-     {% set html %}
+      {% if (data['confirm-bank-details'] != 'confirmed') %}
+    {% set html %}
       <p class="govuk-notification-banner__heading">
-        The nominated Head of Finance will need to confirm your local authority's bank details.
+        Please confirm your local authority's bank details.
+        <a class="govuk-notification-banner__link" href="/laps/head-of-finance/confirm-bank-details">Confirm bank details</a>
       </p>
     {% endset %}
 
@@ -76,8 +77,11 @@
       html: html
     }) }}
   
- 
+  {% endif %}
+  
 
+
+  
   <span class="govuk-caption-xl">Glamshire County Council</span>
   <h1 class="govuk-heading-xl">Bank details</h1>
 
@@ -86,12 +90,19 @@
       <h2 class="govuk-heading-m">Your local authority's bank details</h2>
     </div>
     <div class="right-box">
+      {% if data['confirm-bank-details'] == 'confirmed' %}
+        <strong class="govuk-tag govuk-tag--green">
+          Confirmed
+        </strong>
+      {% else %}
         <strong class="govuk-tag govuk-tag--red">
           Unconfirmed
         </strong>
+      {% endif %}
     </div>
   </div>
-      {{ govukSummaryList({
+  {% if (data['user-type'] == 'head-of-finance') or (data['user-type'] == 'ceo') %}
+    {{ govukSummaryList({
       rows: [
         {
           key: {
@@ -119,12 +130,41 @@
         }
       ]
     }) }}
-    
+    {% else %}
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Account name"
+          },
+          value: {
+            text: "Glamshire County Council"
+          }
+        },
+        {
+          key: {
+            text: "Sort code"
+          },
+          value: {
+            text: "ending with 56"
+          }
+        },
+        {
+          key: {
+            text: "Account number"
+          },
+          value: {
+            text: "ending with 112"
+          }
+        }
+      ]
+    }) }}
+  {% endif %}
 
   {{ govukDetails({
-    summaryText: "These details are incorrect",
-    html: "<p class='govuk-body'>To update your local authority's bank details, contact customer services.</p>
-            <p class='govuk-body'>We'll let you know once the update is complete, and you'll be able to confirm the changes in your account.</p>
+    summaryText: "Change your local authority's bank details",
+    html: "<p class='govuk-body'>CEOs and Heads of Finance can submit a request to update local authority's bank details
+            <a href='#' class='govuk-link'>here</a>.</p>
             <p class='govuk-body'><span class='govuk-!-font-weight-bold'>Email</span><br>
             <a href='mailto:EPRCustomerService@defra.gov.uk' class='govuk-link'>EPRCustomerService@defra.gov.uk</a><br>
             We aim to respond within 20 working days
