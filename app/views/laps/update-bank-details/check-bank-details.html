@@ -1,0 +1,118 @@
+{% extends "layouts/laps-head-of-finance.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block pageTitle %}
+  Update your local authority's bank details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+      text: "Back",
+      href: "/laps/update-bank-details/update-bank-details"
+    }) }}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Check bank details</h1>
+
+<h2 class="govuk-heading-m">Your local authority's bank details</h2>
+
+          {{ govukSummaryList({
+    rows: [
+      {
+        key: {
+          text: "Local authority"
+        },
+        value: {
+          text: "Glamshire County Council"
+          ]
+        },
+      {
+        key: {
+          text: "Account name"
+        },
+        value: {
+          text: data['account-name']
+        },
+        actions: {
+        items: [
+          {
+            href: "/laps/update-bank-details/update-bank-details",
+            text: "Change",
+            visuallyHiddenText: "accountName"
+          }
+        ]
+        }
+      },
+      {
+        key: {
+          text: "Sort Code"
+        },
+        value: {
+          text: data['sort-code']
+        },
+        actions: {
+        items: [
+          {
+            href: "/laps/update-bank-details/update-bank-details",
+            text: "Change",
+            visuallyHiddenText: "sortCode"
+          }
+        ]
+        }
+      },
+      {
+        key: {
+          text: "Account number"
+        },
+        value: {
+          text: data['account-number']
+        },
+        actions: {
+        items: [
+          {
+            href: "/laps/update-bank-details/update-bank-details",
+            text: "Change",
+            visuallyHiddenText: "accountNumber"
+          }
+        ]
+        }
+      }
+    ]
+  }) }}
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Confirm and submit
+</button>
+
+{% endblock %}

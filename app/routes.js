@@ -283,3 +283,15 @@ router.post('/idm-ttp/account-management/add-team-member-ceo/admin', (req, res) 
 router.post('/idm-ttp/account-management/add-team-member-ceo/check-answers', (req, res) => {
     res.redirect("/idm-ttp/account-management/add-team-member-ceo/team-member-added");
 })
+
+router.post('/laps/update-bank-details/bank-details-info', (req, res) => {
+    res.redirect("/laps/update-bank-details/update-bank-details");
+})
+
+router.post('/laps/update-bank-details/update-bank-details', (req, res) => {
+    res.redirect("/laps/update-bank-details/check-bank-details");
+})
+
+router.post('/laps/update-bank-details/check-bank-details', (req, res) => {
+    res.redirect("/laps/update-bank-details/bank-details-submitted");
+})

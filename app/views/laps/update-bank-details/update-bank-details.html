@@ -1,0 +1,88 @@
+{% extends "layouts/laps-head-of-finance.html" %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block pageTitle %}
+  Update your local authority's bank details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukBackLink({
+      text: "Back",
+      href: "/laps/update-bank-details/bank-details-info"
+    }) }}
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Glamshire County Council</span>
+<h1 class="govuk-heading-xl">Update your bank details</h1>
+
+<h2 class="govuk-heading-m">Your local authority's bank details</h2>
+
+  <label class="govuk-label">
+    Requestor name
+  </label>
+  <h3 class="govuk-heading-s">Joe Bloggs</h3>
+
+  <label class="govuk-label">
+    Local authority name
+  </label>
+  <h3 class="govuk-heading-s">Glamshire County Council</h3>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="account-name">
+    Account name
+  </label>
+  <input class="govuk-input govuk-input--width-30" id="account-name" name="accountName" type="text" spellcheck="false" autocomplete="name">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort-code">
+    Sort code
+  </label>
+  <div id="sort-code-hint" class="govuk-hint">
+    Must be 6 digits long
+  </div>
+  <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="account-number">
+    Account number
+  </label>
+  <div id="account-number-hint" class="govuk-hint">
+    Must be between 6 and 8 digits long
+  </div>
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+{% endblock %}
