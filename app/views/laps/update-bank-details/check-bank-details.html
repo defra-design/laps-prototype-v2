@@ -42,14 +42,21 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<span class="govuk-caption-xl">Glamshire County Council</span>
-<h1 class="govuk-heading-xl">Check bank details</h1>
+<span class="govuk-caption-xl">Request to update local authority bank details</span>
+<h1 class="govuk-heading-xl">Confirm new bank account details</h1>
 
-<h2 class="govuk-heading-m">Your local authority's bank details</h2>
 
           {{ govukSummaryList({
     rows: [
-      {
+       {
+        key: {
+          text: "Requested by"
+        },
+        value: {
+          text: "Joe Bloggs"
+          ]
+        },
+        {
         key: {
           text: "Local authority"
         },
