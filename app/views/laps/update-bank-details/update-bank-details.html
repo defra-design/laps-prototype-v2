@@ -79,8 +79,11 @@
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
 </div>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
+<form id="update-bank-details-form" method="post" action="/laps/update-bank-details/check-bank-details">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</form>
+
 
 {% endblock %}
