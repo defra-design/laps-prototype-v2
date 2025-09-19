@@ -69,7 +69,7 @@
           text: "Account name"
         },
         value: {
-          text: data['account-name']
+          text: data['accountName']
         },
         actions: {
         items: [
@@ -86,7 +86,7 @@
           text: "Sort Code"
         },
         value: {
-          text: data['sort-code']
+          text: data['sortCode']
         },
         actions: {
         items: [
@@ -103,7 +103,7 @@
           text: "Account number"
         },
         value: {
-          text: data['account-number']
+          text: data['accountNumber']
         },
         actions: {
         items: [
@@ -118,8 +118,10 @@
     ]
   }) }}
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Confirm and submit
-</button>
+<form id="update-bank-details-form" method="post" action="/laps/update-bank-details/bank-details-submitted">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</form>
 
 {% endblock %}

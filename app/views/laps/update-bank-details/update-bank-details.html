@@ -38,6 +38,7 @@
 {% endblock %}
 
 {% block content %}
+<form id="update-bank-details-form" method="post" action="/laps/update-bank-details/check-bank-details">
 <span class="govuk-caption-xl">Request to update local authority bank details</span>
 <h1 class="govuk-heading-xl">New bank account details</h1>
 
@@ -79,10 +80,12 @@
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
 </div>
 
-<form id="update-bank-details-form" method="post" action="/laps/update-bank-details/check-bank-details">
+<div>
+
   <button type="submit" class="govuk-button" data-module="govuk-button">
     Continue
   </button>
+  </div>
 </form>
 
 
