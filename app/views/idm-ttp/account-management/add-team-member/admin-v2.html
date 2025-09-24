@@ -1,0 +1,93 @@
+{% extends "layouts/idm-sign-up.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBackLink({
+      text: "Back",
+      href: "/idm-ttp/account-management/add-team-member/service-role"
+    }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: "en",
+          href: {
+            en: "/patterns/toggle-to-welsh/examples/en",
+            cy: "/patterns/toggle-to-welsh/examples/cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <form method="post" action="" class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-margin-bottom-6">
+        <span class="govuk-caption-xl">Add a team member</span>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Should this person be an administrator or standard user?
+              </h1>
+            </legend>
+
+            
+            <div class="govuk-inset-text">
+              You can change this later by going to their account and selecting 'Manage'
+            </div>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li><span class="govuk-!-font-weight-bold"> Administrators</span> can add and manage team members for Glamshire County Council. They can also register the organisation for other Defra online services and use those services </li>
+            <li><span class="govuk-!-font-weight-bold"> Standard users</span> can use the services they have been given access to, but cannot manage team members or register the organisation for other Defra online services </li>
+          </ul>
+           
+          </fieldset>
+        </div>
+      </div>
+     
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+                  <div class="govuk-radios govuk-radios--stacked" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="admin" name="admin" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="admin">
+                Administrator
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="admin-2" name="admin" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="admin-2">
+                Standard user
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit" value="continue">
+          Continue
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
