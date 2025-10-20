@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% block pageTitle %}
+  Local Authority Payments (LAPs) home – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukBreadcrumbs({
+        items: [
+          {
+            text: "Local Authority Payments (LAPs) home"
+          }
+        ]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-one-third">
+      {{
+        dwpLanguageToggle({
+          selectedLang: currentLang,
+          href: {
+            en: "?lang=en",
+            cy: "?lang=cy"
+          }
+        })
+      }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  {% if (data['user-type'] == 'head-of-finance') and (data['confirm-bank-details'] != 'confirmed') %}
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        Please confirm your local authority's bank details.<br>
+        <a class="govuk-notification-banner__link" href="/laps/confirm-bank-details">View and confirm bank details</a>
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      html: html
+    }) }}
+  
+  {% endif %}
+  </div>
+</div>
+    
+<span class="govuk-caption-xl">{{ translations['local-authority'] }}</span>
+<h1 class="govuk-heading-xl">Glamshire County Council</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/payment-documents">Payment documents</a></h2>
+      <p class="govuk-body">You can view and download your:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>documents relating to your grant funding, assessments and payments</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/bank-details">Bank details</a></h2>
+      <p class="govuk-body">You can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>view bank details</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half custom-container-card">
+    <div class="custom-card">
+      <h2 class="govuk-heading-m"><a class="govuk-link" href="/laps/get-help">Get help and guidance</a></h2>
+      <p class="govuk-body">You can view our contact details and find links to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>read Local Authority Payments (LAPs) guidance</li>
+        <li>raise a support request</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -12,28 +12,27 @@
     </h1>
 
     <span class="govuk-caption-l">Baseline</span>
-    <h2 class="govuk-heading-l">Private Beta 2.0 <strong class="govuk-tag govuk-tag--light-blue">
-      Current
-      </strong></h2>
+    <h2 class="govuk-heading-l">Private Beta 2.0 <strong class="govuk-tag govuk-tag--light-blue">Current</strong></h2>
     <p class="govuk-body">Local Authority Payments (LAPs) is the digital journey within pEPR that enables local authorities in the UK to engage with the scheme and receive fair compensation for their work in managing packaging waste.</p>
 
+    <!-- SECTION ONE -->
 
-<!-- SECTION ONE -->
-
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">CEO</h2>
 
-  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--green">
           Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
+        </strong>
+        <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
         </strong></p>
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-   <p class="govuk-body">Local Authority Payments (LAPs) journey for CEO. The CEO can:</p>
+      <p class="govuk-body">Local Authority Payments (LAPs) journey for CEO. The CEO can:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>view and download payment documents</li>
         <li>view bank details</li>
@@ -46,69 +45,68 @@
             <div class="govuk-form-group">
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
             </div>
-           <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP').submit();">Home page</a>
+            <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormHP').submit();">Home page</a>
           </form>
         </li>
       
-      
         <li>
-        <form id="userFormBD" method="post" action="/laps/bank-details">
-          <div class="govuk-form-group">
-            <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
-          </div>
-          <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD').submit();">Bank details</a>
-        </form>
-      </li>
-     
-        <li>
-        <form id="userFormPD" method="post" action="/laps/payment-documents">
-          <div class="govuk-form-group">
-            <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
-          </div>
-          <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD').submit();">Payment documents</a>
-        </form>
+          <form id="userFormBD" method="post" action="/laps/bank-details">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
+            </div>
+            <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormBD').submit();">Bank details</a>
+          </form>
         </li>
       
         <li>
-      <form id="userFormGH" method="post" action="/laps/get-help">
+          <form id="userFormPD" method="post" action="/laps/payment-documents">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
+            </div>
+            <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormPD').submit();">Payment documents</a>
+          </form>
+        </li>
+      
+        <li>
+          <form id="userFormGH" method="post" action="/laps/get-help">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
+            </div>
+            <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH').submit();">Get help</a>
+          </form>
+        </li>
+      </ul>
+
+      <form method="post" action="/">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
         </div>
-        <a class="govuk-link govuk-body" href="#" onclick="document.getElementById('userFormGH').submit();">Get help</a>
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+          Start LAPs journey
+        </button>
       </form>
-      </li>
-      </ul>
-  
-  <form method="post" action="/">
-    <div class="govuk-form-group">
-      <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
     </div>
 
-    <button class="govuk-button" data-module="govuk-button" type="submit">
-      Start LAPs journey
-    </button>
-  </form>
 
+    <!-- SECTION TWO -->
 
-</div>
-
-
-<!-- SECTION TWO -->
-
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Head of Finance</h2>
-      
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--green">
           Signed off
         </strong> <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
-        </strong></p>
+        </strong>
+      </p>
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-   <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Finance. The Head of Finance can:</p>
+      <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Finance. The Head of Finance can:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>view and download payment documents</li>
         <li>view and confirm bank details</li>
@@ -121,8 +119,8 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormHP2').submit();">
+                href="#"
+                onclick="event.preventDefault(); document.getElementById('userFormHP2').submit();">
               Home page
             </a>
           </form>
@@ -133,8 +131,8 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormBD2').submit();">
+                href="#"
+                onclick="event.preventDefault(); document.getElementById('userFormBD2').submit();">
               Bank details
             </a>
           </form>
@@ -145,8 +143,8 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormPD2').submit();">
+                href="#"
+                onclick="event.preventDefault(); document.getElementById('userFormPD2').submit();">
               Payment documents
             </a>
           </form>
@@ -157,19 +155,19 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormGH2').submit();">
+                href="#"
+                onclick="event.preventDefault(); document.getElementById('userFormGH2').submit();">
               Get help
             </a>
           </form>
         </li>
       </ul>
-<form method="post" action="/">
+      <form method="post" action="/">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="head-of-finance" required hidden>
         </div>
 
-<button class="govuk-button" data-module="govuk-button" type="submit">
+        <button class="govuk-button" data-module="govuk-button" type="submit">
           Start LAPs journey
         </button>
       </form>
@@ -177,98 +175,104 @@
     </div>
 
 
-<!-- SECTION THREE -->
+    <!-- SECTION THREE -->
 
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Head of Waste</h2>
-      
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--green">
           Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
+        </strong>
+        <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
-        </strong></p>
+        </strong>
+      </p>
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-   <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Waste. The Head of Waste can:</p>
+      <p class="govuk-body">Local Authority Payments (LAPs) journey for Head of Waste. The Head of Waste can:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>view and download payment documents</li>
         <li>view masked bank details</li>
         <li>view guidance and raise support requests</li>
       </ul>
 
-<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-  <li>
-    <form id="userFormHP3" method="post" action="/laps/home-page" style="display:inline;">
-      <div class="govuk-form-group">
-        <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
-      </div>
-      <a class="govuk-link govuk-body"
-         href="#"
-         onclick="event.preventDefault(); document.getElementById('userFormHP3').submit();">
-        Home page
-      </a>
-    </form>
-  </li>
-  <li>
-    <form id="userFormBD3" method="post" action="/laps/bank-details" style="display:inline;">
-      <div class="govuk-form-group">
-        <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
-      </div>
-      <a class="govuk-link govuk-body"
-         href="#"
-         onclick="event.preventDefault(); document.getElementById('userFormBD3').submit();">
-        Bank details
-      </a>
-    </form>
-  </li>
-  <li>
-    <form id="userFormPD3" method="post" action="/laps/payment-documents" style="display:inline;">
-      <div class="govuk-form-group">
-        <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
-      </div>
-      <a class="govuk-link govuk-body"
-         href="#"
-         onclick="event.preventDefault(); document.getElementById('userFormPD3').submit();">
-        Payment documents
-      </a>
-    </form>
-  </li>
-  <li>
-    <form id="userFormGH3" method="post" action="/laps/get-help" style="display:inline;">
-      <div class="govuk-form-group">
-        <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
-      </div>
-      <a class="govuk-link govuk-body"
-         href="#"
-         onclick="event.preventDefault(); document.getElementById('userFormGH3').submit();">
-        Get help
-      </a>
-    </form>
-  </li>
-</ul>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>
+          <form id="userFormHP3" method="post" action="/laps/home-page" style="display:inline;">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
+            </div>
+            <a class="govuk-link govuk-body"
+              href="#"
+              onclick="event.preventDefault(); document.getElementById('userFormHP3').submit();">
+              Home page
+            </a>
+          </form>
+        </li>
+        <li>
+          <form id="userFormBD3" method="post" action="/laps/bank-details" style="display:inline;">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
+            </div>
+            <a class="govuk-link govuk-body"
+              href="#"
+              onclick="event.preventDefault(); document.getElementById('userFormBD3').submit();">
+              Bank details
+            </a>
+          </form>
+        </li>
+        <li>
+          <form id="userFormPD3" method="post" action="/laps/payment-documents" style="display:inline;">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
+            </div>
+            <a class="govuk-link govuk-body"
+              href="#"
+              onclick="event.preventDefault(); document.getElementById('userFormPD3').submit();">
+              Payment documents
+            </a>
+          </form>
+        </li>
+        <li>
+          <form id="userFormGH3" method="post" action="/laps/get-help" style="display:inline;">
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
+            </div>
+            <a class="govuk-link govuk-body"
+              href="#"
+              onclick="event.preventDefault(); document.getElementById('userFormGH3').submit();">
+              Get help
+            </a>
+          </form>
+        </li>
+      </ul>
 
     </div>
 
     
-<!-- SECTION FOUR -->
+    <!-- SECTION FOUR -->
 
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Finance and Waste Officers</h2>
-      
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--green">
           Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
+        </strong>
+        <strong class="govuk-tag govuk-tag--pink">
           Updated July 2025
-        </strong></p>
+        </strong>
+      </p>
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-   <p class="govuk-body">Local Authority Payments (LAPs) journey for Finance and Waste Officers. The Finance and Waste Officers can:</p>
+      <p class="govuk-body">Local Authority Payments (LAPs) journey for Finance and Waste Officers. The Finance and Waste Officers can:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>view and download payment documents</li>
         <li>view masked bank details</li>
@@ -282,9 +286,9 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormHP4').submit();">
-              Home page
+                  href="#"
+                  onclick="event.preventDefault(); document.getElementById('userFormHP4').submit();">
+                  Home page
             </a>
           </form>
         </li>
@@ -294,9 +298,9 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormBD4').submit();">
-              Bank details
+                  href="#"
+                  onclick="event.preventDefault(); document.getElementById('userFormBD4').submit();">
+                  Bank details
             </a>
           </form>
         </li>
@@ -306,9 +310,9 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormPD4').submit();">
-              Payment documents
+                  href="#"
+                  onclick="event.preventDefault(); document.getElementById('userFormPD4').submit();">
+                  Payment documents
             </a>
           </form>
         </li>
@@ -318,328 +322,315 @@
               <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" hidden>
             </div>
             <a class="govuk-link govuk-body"
-               href="#"
-               onclick="event.preventDefault(); document.getElementById('userFormGH4').submit();">
-              Get help
+                  href="#"
+                  onclick="event.preventDefault(); document.getElementById('userFormGH4').submit();">
+                  Get help
             </a>
           </form>
         </li>
       </ul>
 
-<form method="post" action="/">
+      <form method="post" action="/">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" required hidden>
         </div>
 
-<button class="govuk-button" data-module="govuk-button" type="submit">
-          Start LAPs journey
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+              Start LAPs journey
         </button>
       </form>
 
     </div>
 
      
-<!-- IDM TTP -->
- <h2 class="govuk-heading-m">Identity Management (IDM)</h2>
+    <!-- IDM TTP -->
+    <h2 class="govuk-heading-m">Identity Management (IDM)</h2>
 
-<!-- SECTION ONE -->
-
-<div class="custom-card-border-blue">
+    <!-- SECTION ONE -->
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Nominated Owner (LAPs CEO)</h2>
-      
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+          
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
-          Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
-          Updated July 2025
-        </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Identity Management Trusted Third Party journey for the Nominated Owner. The Nominated Owner is accountable for the organisation, and can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>invite users</li>
-          <li>assign roles</li>
-          <li>manage access for others</li>
-          <li>update their name</li>
-          <li>use services they have been given access to</li>
-        </ul>'
-      },
-      content: {
-        html: '<h2 class="govuk-heading-m">Registration</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              html: ''
+            },
+            summary: {
+              html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+                Signed off
+              </strong> <strong class="govuk-tag govuk-tag--pink">
+                Updated July 2025
+              </strong></p>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-body">Identity Management Trusted Third Party journey for the Nominated Owner. The Nominated Owner is accountable for the organisation, and can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>invite users</li>
+                <li>assign roles</li>
+                <li>manage access for others</li>
+                <li>update their name</li>
+                <li>use services they have been given access to</li>
+              </ul>'
+            },
+            content: {
+              html: '<h2 class="govuk-heading-m">Registration</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-          <li><a class="govuk-link" href="/idm-ttp/emails/owner-registration-email">Registration email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/confirm-details">Confirm your details</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed">Registration confirmed</a></li>
-          </ul>
+                <li><a class="govuk-link" href="/idm-ttp/emails/owner-registration-email">Registration email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/confirm-details">Confirm your details</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed">Registration confirmed</a></li>
+                </ul>
 
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-          <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-          <h3 class="govuk-heading-s">Add team member</h3>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-ceo">Your Defra account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/la-account-ceo">Local authority account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access-ceo">Manage team access</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/choose-a-service">Choose a service</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/what-we-need">What we need</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/whats-their-la-email">Whats their local authority email address?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/service-role">What role will they have on this service?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/admin">Will they be an administrator for the organisation?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/team-member-added">Team member added</a></li>
-          </ul>
-          '
-      }
-    }
-  ]
-}) }}
+                <h3 class="govuk-heading-s">Add team member</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-ceo">Your Defra account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/la-account-ceo">Local authority account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access-ceo">Manage team access</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/choose-a-service">Choose a service</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/what-we-need">What we need</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/whats-their-la-email">Whats their local authority email address?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/service-role">What role will they have on this service?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/admin">Will they be an administrator for the organisation?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member-ceo/team-member-added">Team member added</a></li>
+                </ul>
+                '
+            }
+          }
+        ]
+      }) }}
 
-<form method="post" action="/idm-ttp/registration/start">
+      <form method="post" action="/idm-ttp/registration/start">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="ceo" required hidden>
         </div>
 
-<button class="govuk-button" data-module="govuk-button" type="submit">
-          Start registration journey
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+              Start registration journey
         </button>
       </form>  
 
-
-  <!-- <form id="userForm" method="post" action="/idm-ttp/registration/confirm-your-email">
-          <div class="govuk-form-group">
-            <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
-          </div>
-         <a href="#" onclick="document.getElementById('userForm').submit();">Start Nominated Owner journey</a>
-  </form> -->
-
- 
-     
+      <!-- <form id="userForm" method="post" action="/idm-ttp/registration/confirm-your-email">
+              <div class="govuk-form-group">
+                <input class="govuk-input" id="user-type" name="user-type" type="text" value="ceo" required hidden>
+              </div>
+            <a href="#" onclick="document.getElementById('userForm').submit();">Start Nominated Owner journey</a>
+      </form> -->
       
     </div>
 
+    <!-- SECTION TWO -->
 
-<!-- SECTION TWO -->
-
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Administrator (LAPs HoF)</h2>
-      
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
-          Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
-          Updated July 2025
-        </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Identity Management Trusted Third Party journey for Administrators. The Administrator can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>invite users</li>
-          <li>assign roles</li>
-          <li>manage access for others</li>
-           <li>update their name</li>
-          <li>use services they have been given access to</li>
-        </ul>'
-      },
-      content: {
-        html: '<h2 class="govuk-heading-m">Registration</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-          <li><a class="govuk-link" href="/idm-ttp/emails/admin-registration-email">Registration email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/whats-your-name">Whats your name?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-admin">Registration complete</a></li>
-          </ul>
-
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-          <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-
-          <h3 class="govuk-heading-s">Add team member</h3>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/la-account">Local authority account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/choose-a-service">Choose a service</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/what-we-need">What we need</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/whats-their-la-email">Whats their local authority email address?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/service-role">What role will they have on this service?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/admin">Will they be an administrator for the organisation?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/team-member-added">Team member added</a></li>
           
-          <!-- <h3 class="govuk-heading-s govuk-!-margin-top-6">Change name</h3>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li> -->
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-          <!-- <h3 class="govuk-heading-s govuk-!-margin-top-6">Change account role</h3>
-           <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/admin">Are they an administrator for the organisation?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/manage-team-member-success">Manage team member success</a></li> -->
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              html: ''
+            },
+            summary: {
+              html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+                Signed off
+              </strong> <strong class="govuk-tag govuk-tag--pink">
+                Updated July 2025
+              </strong></p>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-body">Identity Management Trusted Third Party journey for Administrators. The Administrator can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>invite users</li>
+                <li>assign roles</li>
+                <li>manage access for others</li>
+                <li>update their name</li>
+                <li>use services they have been given access to</li>
+              </ul>'
+            },
+            content: {
+              html: '<h2 class="govuk-heading-m">Registration</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li><a class="govuk-link" href="/idm-ttp/emails/admin-registration-email">Registration email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/whats-your-name">Whats your name?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-admin">Registration complete</a></li>
+                </ul>
 
-          <h3 class="govuk-heading-s govuk-!-margin-top-6">Change service role</h3>
-           <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/service-role">What role will they have on the service?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/manage-team-member-success">Manage team member success</a></li>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-          <h3 class="govuk-heading-s govuk-!-margin-top-6">Assign service</h3>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member">Manage team member</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/choose-a-service">Which service do you want this person to use?</a></li>
-           <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/what-we-need">What we need</a></li>
-            <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/service-role">What role will they have on this service?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member-success">Manage team member success</a></li>
-          </ul>'
-      }
-    }
-  ]
-}) }}
+                <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-<form method="post" action="/idm-ttp/registration/start">
+                <h3 class="govuk-heading-s">Add team member</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/la-account">Local authority account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/choose-a-service">Choose a service</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/what-we-need">What we need</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/whats-their-la-email">Whats their local authority email address?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/service-role">What role will they have on this service?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/admin">Will they be an administrator for the organisation?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/add-team-member/team-member-added">Team member added</a></li>
+                
+                <!-- <h3 class="govuk-heading-s govuk-!-margin-top-6">Change name</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-admin">Your Defra account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li> -->
+
+                <!-- <h3 class="govuk-heading-s govuk-!-margin-top-6">Change account role</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/admin">Are they an administrator for the organisation?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-account-role/manage-team-member-success">Manage team member success</a></li> -->
+
+                <h3 class="govuk-heading-s govuk-!-margin-top-6">Change service role</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-access">Manage team access</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/manage-team-member">Manage team member</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/service-role">What role will they have on the service?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-service-role/manage-team-member-success">Manage team member success</a></li>
+
+                <h3 class="govuk-heading-s govuk-!-margin-top-6">Assign service</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member">Manage team member</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/choose-a-service">Which service do you want this person to use?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/what-we-need">What we need</a></li>
+                  <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/service-role">What role will they have on this service?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/assign-service/manage-team-member-success">Manage team member success</a></li>
+                </ul>'
+            }
+          }
+        ]
+      }) }}
+
+      <form method="post" action="/idm-ttp/registration/start">
         <div class="govuk-form-group">
           <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="admin" required hidden>
         </div>
 
-<button class="govuk-button" data-module="govuk-button" type="submit">
-          Start registration journey
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+              Start registration journey
         </button>
       </form>  
 
     </div>
 
-<!-- SECTION THREE -->
+    <!-- SECTION THREE -->
 
-<div class="custom-card-border-blue">
+    <div class="custom-card-border-blue">
       <h2 class="govuk-heading-m govuk-link-">Standard User (LAPs FO & WO)</h2>
-      
-{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
-
-{{ govukAccordion({
-  id: "accordion-default",
-  items: [
-    {
-      heading: {
-        html: ''
-      },
-      summary: {
-        html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
-          Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
-          Updated July 2025
-        </strong></p>
-           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-           <p class="govuk-body">Identity Management Trusted Third Party journey for Standard Users. The Standard User can:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>update their name</li>
-          <li>use services they have been given access to</li>
-        </ul>'
-      },
-      content: {
-        html: '<h2 class="govuk-heading-m">Registration</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-
-          <li><a class="govuk-link" href="/idm-ttp/emails/standard-registration-email">Registration email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/whats-your-name">Whats your name?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-standard">Registration complete</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
-          </ul>
-
-          <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
           
-          <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
-          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-          <h3 class="govuk-heading-s">Change name</h3>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
-          <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li>
-          </ul> -->
-          '
-      }
-    }
-  ]
-}) }}
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              html: ''
+            },
+            summary: {
+              html: '<p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
+                Signed off
+              </strong> <strong class="govuk-tag govuk-tag--pink">
+                Updated July 2025
+              </strong></p>
+                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <p class="govuk-body">Identity Management Trusted Third Party journey for Standard Users. The Standard User can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>update their name</li>
+                <li>use services they have been given access to</li>
+              </ul>'
+            },
+            content: {
+              html: '<h2 class="govuk-heading-m">Registration</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-  
-    <form method="post" action="/idm-ttp/registration/start">
-            <div class="govuk-form-group">
-              <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" required hidden>
-            </div>
+                <li><a class="govuk-link" href="/idm-ttp/emails/standard-registration-email">Registration email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/confirm-your-email">Confirm your email address</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/emails/otp-email">OTP email</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/enter-the-verification-code">Enter verification code</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/terms-and-conditions">Terms and conditions</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/whats-your-name">Whats your name?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/registration/registration-confirmed-standard">Registration complete</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
+                </ul>
 
-    <button class="govuk-button" data-module="govuk-button" type="submit">
-              Start registration journey
-            </button>
-          </form>  
+                <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                
+                <h2 class="govuk-heading-m govuk-!-margin-top-6">Account management</h2>
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
-    <!-- <form method="post" action="/idm-ttp/account-management/your-defra-account-standard">
-            <div class="govuk-form-group">
-              <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
-            </div>
+                <h3 class="govuk-heading-s">Change name</h3>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/your-defra-account-standard">Your Defra account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account">User account</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/whats-your-name">Whats your name?</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/check-answers">Check your answers</a></li>
+                <li><a class="govuk-link" href="/idm-ttp/account-management/change-name/user-account-success">User account success</a></li>
+                </ul> -->
+                '
+            }
+          }
+        ]
+      }) }}
 
-    <button class="govuk-button" data-module="govuk-button" type="submit">
-              Start Account management journey
-            </button>
-          </form>  -->
+      <form method="post" action="/idm-ttp/registration/start">
+        <div class="govuk-form-group">
+            <input class="govuk-input" id="user-type" name="user-type" type="hidden" value="#" required hidden>
+        </div>
 
-    
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+                  Start registration journey
+        </button>
+      </form>  
+
+        <!-- <form method="post" action="/idm-ttp/account-management/your-defra-account-standard">
+                <div class="govuk-form-group">
+                  <input class="govuk-input" id="user-type" name="user-type" type="text" value="#" required hidden>
+                </div>
+
+        <button class="govuk-button" data-module="govuk-button" type="submit">
+                  Start Account management journey
+                </button>
+              </form>  -->
+
     </div>
 
+    <!-- SHUTTER PAGES -->
 
-<!-- SHUTTER PAGES -->
-
-<h2 class="govuk-heading-m">Shutter pages</h2>
+    <h2 class="govuk-heading-m">Shutter pages</h2>
     <p class="govuk-body govuk-!-margin-bottom-4"></p>
 
     <div class="custom-card-border-blue">
-      <h2 class="govuk-heading-m"> Common shutter pages for the service</h2>
-      <p class="govuk-body"> <strong class="govuk-tag govuk-tag--green">
-          Signed off
-        </strong> <strong class="govuk-tag govuk-tag--pink">
-          Updated July 2025
-        </strong></p>
-
+      <h3 class="govuk-heading-m"> Common shutter pages for the service</h3>
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--green">Signed off</strong>
+        <strong class="govuk-tag govuk-tag--pink">Updated July 2025</strong>
+      </p>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
       <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-
         <li><a class="govuk-link" href="/shutter-pages/problem-with-the-service">Service problem</a>
         <li><a class="govuk-link" href="/shutter-pages/page-not-found">Page not found</a>
         <li><a class="govuk-link" href="/shutter-pages/service-is-unavilable">Service unavailable</a>
@@ -648,8 +639,7 @@
       </ul>
     </div>
 
-
-  </div>
+  </div> <!--END govuk-grid-column-two-thirds-->
 
   <!-- SIDEBAR -->
   <div class="govuk-grid-column-one-third">
@@ -661,7 +651,7 @@
     <p class="govuk-body"> <strong class="govuk-tag govuk-tag--light-red">
     Old
     </strong> <a class="govuk-link" href="https://laps-prototype-e21618a16725.herokuapp.com/index" rel="noreferrer noopener" target="_blank">Private beta phase 1.0 (Opens in new tab)</a></p>
-  </div>
-</div>
+  </div> <!--END SIDEBAR-->
+</div> <!--END govuk-grid-row-->
 
 {% endblock %}
