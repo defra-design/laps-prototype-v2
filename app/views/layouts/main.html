@@ -8,9 +8,10 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% from "language-toggle/macro.njk" import dwpLanguageToggle %}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
 
+{% set govukRebrand = true %}
 
 {% block header %}
-  {{ govukHeader({}) }}
+  {{ govukHeader({rebrand: true}) }}
 {% endblock %}
 
 
